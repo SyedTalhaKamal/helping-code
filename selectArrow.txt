@@ -1,0 +1,29 @@
+<div class="col-lg-6 text-lg-right text-left">
+<select name="" id="year">
+<option value="">Select Year</option>
+<option value="">2012</option>
+<option value="">2012</option>
+<option value="">2012</option>
+<option value="">2012</option>
+<option value="">2012</option>
+</select>
+</div>
+
+
+#year{
+    background-color: #fff !important;
+    color: #000 !important;
+    width: 170px;
+    padding: 0 15px !important;
+    font-size: 16px !important;
+    background-image: url(../images/yeararrow.png) !important;
+    background-repeat: no-repeat;
+    background-position: 92% 20px !important;
+    margin: 0px 0 20px 0;
+    border-radius: 25px !important;
+    appearance: none;
+    height: 50px !important;
+    outline: none;
+    padding: 0 0 0 17px !important;
+    border: 1px solid #ebebeb !important;
+}

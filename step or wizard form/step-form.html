@@ -1,0 +1,199 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+
+<title>step form </title>
+</head>
+<style>
+ 
+
+ .register-inner input, .register-inner select {
+    border: 0px;
+    box-shadow: 0 0 15px 0 rgb(0 0 0 / 30%);
+    border-radius: 5px;
+    padding: 0 50px 0 50px !important;
+    font-size: 14px !important;
+}
+.register-inner i {
+    position: absolute;
+    bottom: 33px;
+    left: 40px;
+    color: #666666;
+}
+input {
+    font-weight: 400;
+    position: relative;
+    height: 50px;
+    color: black !important;
+    font-size: 12px !important;
+    margin: 0 0 15px 0;
+    padding: 0 15px !important;
+    border: 0px;
+    font-family: 'Poppins', sans-serif;
+}
+.register-inner .tabbs {
+    margin: 40px 0 0 0 !important;
+    padding: 0 90px;
+}
+#regForm .step.active, #regForm-2 .step.active {
+    opacity: 1;
+    background: #000000 !important;
+    border: 8px solid #cccccc;
+}
+#regForm .step, #regForm-2 .step {
+    height: 60px;
+    width: 60px;
+    margin: 30px 0 !important;
+    background-color: #666666;
+    border-radius: 50%;
+    display: flex;
+    border: 8px solid #cccccc;
+    margin: 0 0 0 0;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    color: white;
+    font-weight: 600;
+}
+button.icon {
+    margin: 0 !important;
+    position: absolute;
+    top: 15px;
+    right: 84px;
+    background: transparent;
+    padding: 0;
+    border: 0;
+}
+.register button.icon {
+    top: initial;
+}
+form#regForm .buttons button, #regForm-2 .buttons button {
+    margin: 0 0 20px 0;
+    padding: 20px 0;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+.register span.text {
+    position: relative;
+}
+.register span.text-1::after {
+    position: absolute;
+    background: #cccccc;
+    width: 202px;
+    height: 1px;
+    bottom: 60px;
+    content: '';
+    left: 60px;
+}
+
+</style>
+<body>
+	
+<!-- Top Banner end Here -->
+<!-- Step Form start Here -->
+<section class="p-100 register">
+	<div class="container">
+		<div class="col-12 col-md-8 offset-md-2 col-xl-6 offset-xl-3 col-12">
+			<div class="register-inner">
+				<h2>Register</h2>
+				<p>Don't have an account? Create new</p>
+				<form id="regForm" action="login.php" enctype="multipart/form-data">
+					<div class="d-flex justify-content-between text-center tabbs" style="margin-top:60px;">
+						<span class="text text-1"><h4>step 1</h4><span class="step">1</span></span>
+						<span class="text"><h4>step 2</h4><span class="step">2</span></span>
+					</div>
+					<div class="tab">
+
+						<div class="row">
+							<div class="col-12">
+								<h6>Personal Information</h6>
+							</div>
+							<div class="col-12 form-group ">
+								<label for="">first name*</label>
+								<input type="text" class="form-control" placeholder="First Name">
+								<i class="fa fa-user"></i>
+							</div>
+							<div class="col-12 form-group ">
+								<label for="">last name*</label>
+								<input type="text" class="form-control" placeholder="Name here">
+								<i class="fa fa-user"></i>
+							</div>
+							<div class="col-12 form-group">
+								<label for="">Phone number*</label>
+								<input class="phone-no" type="number" placeholder="" id="phone">
+							</div>
+							<div class="col-12 form-group ">
+								<label for="">email*</label>
+								<input type="email" class="form-control" placeholder="Email Address">
+								<i class="fa fa-envelope"></i>
+							</div>
+							<div class="col-12 form-group">
+								<h6>Note: Prefer to use your professional email address</h6>
+							</div>
+							<div class="col-12 form-group ">
+								<label for="">Password*</label>
+								<input type="password" class="form-control" placeholder="Password">
+								<i class="fa fa-lock"></i>
+								<button class="icon" type="button"><i class="fa fa-eye-slash"></i></button>
+							</div>
+							<div class="col-12 form-group ">
+								<label for="">Confrim Password*</label>
+								<input type="password" class="form-control" placeholder="Retype Password">
+								<i class="fa fa-lock"></i>
+								<button class="icon" type="button"><i class="fa fa-eye-slash"></i></button>
+							</div>
+						</div>
+					</div>
+					<div class="tab">
+						<div class="row">
+							<div class="col-12">
+								<h6>Address Information</h6>
+							</div>
+							<div class="col-12 form-group position-relative">
+								<label for="">address*</label>
+								<input type="text" class="form-control" placeholder="Address">
+								<i class="fa fa-paper-plane"></i>
+							</div>
+							<div class="col-12 form-group position-relative">
+								<label for="">country*</label>
+								<input type="text" class="form-control" placeholder="Country">
+								<i class="fa fa-globe"></i>
+							</div>
+							<div class="col-12 form-group position-relative">
+								<label for="">state*</label>
+								<input type="text" class="form-control" placeholder="State">
+								<i class="fa fa-map-marker-alt"></i>
+							</div>
+							<div class="col-12 form-group position-relative">
+								<label for="">city*</label>
+								<input type="text" class="form-control" placeholder="City">
+								<i class="fa fa-map-pin"></i>
+							</div>
+							<div class="col-12 form-group position-relative">
+								<label for="">zip code*</label>
+								<input type="text" class="form-control" placeholder="Code">
+								<i class="fa fa-qrcode"></i>
+							</div>
+						</div>
+					</div>
+					<div style="overflow:auto;">
+						<div class="d-sm-flexd d-block justify-content-between buttons">
+							<button type="button" id="nextBtn" class="form-control black-btn" onclick="nextPrev(1, event)">Continue</button>
+							<button type="button" style='display: none' class="form-control black-btn prevBtn" onclick="nextPrev(-1, event)">Previous</button>
+						</div>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</section>
+<!-- Step Form end Here -->
+	
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="step-form.js"></script>
+</body>
+</html>

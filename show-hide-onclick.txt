@@ -1,0 +1,19 @@
+<div id="active-1">
+<a href="#_" onclick="myFunction()"></a>
+</div>
+<div id="active-2">
+<a href="#_" onclick="myFunction2()"></a>
+</div>
+
+
+<script>
+    function myFunction() {
+        var y = document.getElementById("active-1").style.display = "none";
+        var x = document.getElementById("active-2").style.display = "block";
+    }
+
+    function myFunction2() {
+        var y = document.getElementById("active-1").style.display = "block";
+        var x = document.getElementById("active-2").style.display = "none";
+    }
+</script>

@@ -1,0 +1,22 @@
+ul {
+  list-style-type: none; /* no default bullets */
+}
+ul li:before { /* the custom styled bullets */
+  background-color: #14CCBB;
+  border-radius: 50%;
+  content: "";
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 2px;
+  height: 10px;
+  width: 10px;
+}
+<ul>
+  <li>Swollen joints</li>
+  <li>Pain in hands and knees</li>
+  <li>Redness around joints</li>
+  <li>Constant fatigue</li>
+  <li>Morning stiffness in joints</li>
+  <li>High fevers</li>
+  <li>Rheumatoid nodules, which develop around joints</li>
+</ul>

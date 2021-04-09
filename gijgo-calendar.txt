@@ -1,0 +1,52 @@
+<input id="datepicker" class="sort-date customdate" />
+<script>
+     $('#datepicker').datepicker({
+         uiLibrary: 'bootstrap4',
+         iconsLibrary: 'fontawesome'
+     });                       
+</script>
+
+
+i.fa.fa-calendar {
+    color: #999999;
+}
+.gj-datepicker-bootstrap [role=right-icon] button {
+    border: 1px solid #ebebeb;
+}
+.customdate{
+    border-right: 1px solid white !important;
+}
+.btn-outline-secondary:not(:disabled):not(.disabled):active, .btn-outline-secondary:not(:disabled):not(.disabled).active, .show > .btn-outline-secondary.dropdown-toggle {
+    color: #fff;
+    background-color: transparent;
+    border-color: transparent;
+}
+.gj-picker-bootstrap table tr td.today div {
+    color: white;
+    font-weight: 400;
+    background-color: #EBB517;
+    border-radius: 100%;
+    font-size: 10px;
+}
+.gj-picker-bootstrap table tr td div {
+    font-weight: 400;
+    color: #999999;
+    font-size: 10px;
+}
+.gj-picker div[role=navigator] div[role=period] {
+    width: 100%;
+    text-align: center;
+    font-weight: 600;
+    font-size: 15px;
+    font-family: 'Source Serif Pro';
+    color: black;
+}
+.fa-calendar:before {
+    content: "\f073" !important;
+}
+/*.btn,.fc button {
+    padding: 0 !important;
+}
+.customdate2{
+    padding: 0 !important;
+}*/

@@ -1,0 +1,11 @@
+https://www.tiny.cloud/docs/general-configuration-guide/basic-setup/
+
+
+<script src="https://cloud.tinymce.com/stable/tinymce.min.js"></script>
+<script>
+tinymce.init({
+selector:'#tinymce',
+width: 900,
+height: 300
+});
+</script>

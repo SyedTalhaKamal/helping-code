@@ -1,0 +1,8 @@
+
+<label for="picture" class="d-block">
+                                                       <img src="images/pictures-details-2.png" alt="" class="w-100 img-fluid">
+                                                   </label>
+<form style="display: none;">
+                                                       <input type="file" name="pic" accept=".gif,.jpg,.png,.tif|image/*" id="picture">
+                                                       <input type="submit">
+                                                   </form>

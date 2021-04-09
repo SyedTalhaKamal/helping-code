@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="fullcalander.css" type="text/css">
+    <title>Calendar</title>
+    <style>
+        /* ============================================================= Calender start here ============================================================= */
+/*================================ calendar page start here ===================================*/ 
+
+.my-cal h1 {text-transform: uppercase;font-size: 30px;color: black;line-height: 35px;}
+.my-cal .fc {margin: 40px 0 0 0;}
+.my-cal .dates .btn:not(:disabled):not(.disabled), .fc button:not(:disabled):not(.disabled) {position: initial;}
+.my-cal .fc-button {padding: 0 10px;border: 1px solid black !important;color: black;border-radius: 0;background: transparent;box-shadow: none !important;opacity: 1;height: 2.3em;font-weight: 400;}
+.my-cal hr.fc-divider.fc-widget-header {display: none !important;}
+.my-cal .fc-state-default.fc-corner-left {border-top-left-radius: 4px !important;border-bottom-left-radius: 4px !important;}
+.my-cal .fc-state-default.fc-corner-right {border-top-right-radius: 4px !important;border-bottom-right-radius: 4px !important;}
+.my-cal .fc-button:hover {padding: 5px 10px;border-color: #e65f00;color: #fff;background: #333;}
+.my-cal .fc-center h2 {font-size: 25px;color: #333;margin: 0;font-weight: 500;}
+.my-cal .fc-toolbar {margin: 0 0 20px;}
+.fc-unthemed .fc-content,.fc-unthemed .fc-divider,.fc-unthemed .fc-popover,.fc-unthemed .fc-row,.fc-unthemed tbody,.fc-unthemed td,.fc-unthemed th,
+.fc-unthemed thead {border-color: #dfdfdf;padding: 0 !important;}
+.my-cal .fc-event {background: black;border: 1px solid black;border-radius: 0;padding: 20px 10px;}
+.my-cal .fc-event span {font-size: 14px;color: #FFF;font-weight: 400;}
+.fc-time-grid .fc-slats td {height: 1.5em;border: 0;}
+.ui-widget-header {border: 1px solid #e65f00;background: #e65f00;color: #fff;font-weight: bold;border-radius: 0 !important;}
+.my-cal-home .datepicker--cell.-current- {color: #fff;background: #e65f00;border-radius: 0;}
+.my-cal-home .datepicker--day-name {color: #333;font-size: 14px;font-weight: 600 !important;font-family: 'Roboto', sans-serif !important;}
+.my-cal-home .datepicker--nav-action path {fill: none;stroke: #333;stroke-width: 2px;}
+.my-cal-home .datepicker--nav-title {border-radius: 0;padding: 0 8px;font-size: 18px;font-weight: 500;color: #333;font-family: 'Roboto', sans-serif !important;}
+.my-cal-home .datepicker--nav-title i {color: #333;}
+.my-cal-home .datepicker {box-shadow: 0 0px 20px 0 #eaeaea !important;width: 100%;margin: 0 auto 20px;}
+.my-cal-home .datepicker--cell.-selected-,
+.datepicker--cell.-selected-.-current-,
+.datepicker--cell.-selected-.-focus- {color: #fff;background: #e65f00;border-radius: 0;}
+.my-cal-home a.cal-btn {font-size: 12px;color: #fff;background: #e65f00;border-radius: 50px;padding: 8px 15px;font-weight: 500;display: inline-block;margin: 0 0 30px;transition: all .3s ease-in-out;}
+.my-cal-home a.cal-btn:hover {background: #333;} 
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {border: 1px solid #999999;background: #dadada url(../css/images/ui-bg_glass_75_dadada_1x400.png) 50% 50% repeat-x        !important;font-weight: normal;color: #212121;}
+.ui-dialog .ui-dialog-content {font-size: 25px;color: #4d4d4d;}
+.my-cal tr {box-shadow: none;}
+.my-cal table {border-spacing: 0 0 !important;margin: 0 !important;}
+.fc-row .fc-widget-header {padding: 30px 0 !important;color: #4F5C73;font-weight: 600;}
+.fc-row.fc-widget-header {margin: 0 !important;border-right: 0;}
+.fc-button-group button,button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled {font-weight: 500 !important;text-transform: uppercase;color: #525252 !important;}
+.fc-button-group button:hover,button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled:hover{background:black !important; color:white !important;}
+button.fc-today-button.fc-button.fc-state-default.fc-corner-left.fc-corner-right.fc-state-disabled:hover {color: white !important;}
+.my-cal .fc-button:hover {color: white !important;background: black;}
+button.gj-dialog-md-close {position: absolute;top: 3px;right: 10px;}
+.fc-agenda-view .fc-day-grid .fc-row {margin-right: 0 !important;}
+.fc-time-grid, .fc-time-grid-container {overflow: hidden !important;}
+.fc-axis.fc-widget-header {width: 60px !important;}
+.fc-time-grid .fc-slats td {width: 50px;}
+.fc-ltr .fc-axis {width: 58px !important;padding: 0 0 0 0 !important;}
+.fc-row .fc-bg td.fc-axis.fc-widget-content {text-align: center;}
+.fc-unthemed .fc-content, .fc-unthemed .fc-divider, .fc-unthemed .fc-popover, .fc-unthemed .fc-row, .fc-unthemed tbody, .fc-unthemed td, .fc-unthemed th, .fc-unthemed thead {
+    border-color: #dfdfdf;
+}
+.fc-row .fc-widget-header {
+    padding: 30px 0 !important;
+    color: #4F5C73;
+    font-weight: 600;
+}
+.fc td,.fc th {
+    border-style: solid;
+    border-width: 1px;
+    padding: 0;
+    vertical-align: top;
+}
+.fc th {
+    text-align: center;
+}
+    </style>
+</head>
+<body>
+    <!--calendar details start here-->
+
+
+<section class="session-details my-cal">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div id="bootstrapModalFullCalendar" class="table-responsive"></div>
+
+                <div id="eventContent" title="Event Details">
+                    <div id="eventInfo"></div>
+                    <p><strong><a id="eventLink" target="_blank"></a></strong>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--calendar details end here-->
+
+
+
+    <script src="jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/2.6.1/fullcalendar.min.js"></script>
+    <!--	script for calendar-->
+    <script>
+        $( document ).ready( function () {
+            $( '#bootstrapModalFullCalendar' ).fullCalendar( {
+                header: {
+                    left: "prev,next today",
+                    center: "title",
+                    right: 'month,agendaWeek,agendaDay,List'
+                },
+                eventClick: function ( event, jsEvent, view ) {
+                    //set the values and open the modal
+                    $( "#eventInfo" ).html( event.description );
+                    $( "#eventLink" ).attr( 'href', event.url );
+                    $( "#eventContent" ).dialog( {
+                        modal: true,
+                        title: event.title
+                    } );
+                    return false;
+                },
+                events: [
+    
+                    {
+                        "title": "\nxyz service schedule\nof user abc with employee\npqr",
+                        "allday": "true",
+                        "description": "Session with trainer",
+                        "start": moment().add( 'days', 16 ),
+                        "end": moment().add( 'days', 16 ),
+                        "url": "http://www.mikesmithdev.com/blog/worst-job-titles-in-internet-and-info-tech/"
+                    }, {
+                        "title": "\nxyz service schedule\nof user abc with employee\npqr",
+                        "allday": "true",
+                        "description": "xyz service schedule\nof user abc with employee\npqr",
+                        "start": moment().add( 'days', 17 ),
+                        "end": moment().add( 'days', 17 ),
+                        "url": "http://www.mikesmithdev.com/blog/worst-job-titles-in-internet-and-info-tech/"
+                    }
+                ]
+            } );
+        } );
+    </script>
+
+</body>
+</html>

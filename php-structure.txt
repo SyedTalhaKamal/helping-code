@@ -1,0 +1,25 @@
+<title> Hope 4 You | <?php echo ((isset($title))?$title:'Dashboard'); ?> </title>
+
+
+<li class="nav-item <?php if ($pg == "Dashboard") {echo "active";} else {echo "";} ?>"><a href="dashboard.php"><i class="fa fa-area-chart" aria-hidden="true"></i><span class="menu-title" data-i18n="">Dashboard</span></a></li>
+
+
+         <li class="nav-item has-sub <?php if ($pg == "Product"||$pg =="Category"|| $pg =="Attribute") {echo "active open";} else {echo "";} ?>">
+          <a href="product-management.php"><i class="fa fa-th-large" aria-hidden="true"></i><span class="menu-title" data-i18n="">Product Management</span></a>        
+          <ul class="menu-content">
+            <li><a class="menu-item <?php if ($pg == "Product") {echo "active";} else {echo "";} ?>" href="product-management.php">Inventory Management</a> </li>
+            <li class=""><a class="menu-item <?php if ($pg == "Category") {echo "active";} else {echo "";} ?>" href="category-management.php">Category Management</a> </li>
+            <li><a class="menu-item <?php if ($pg == "Attribute") {echo "active";} else {echo "";} ?>" href="attribute-management.php">Attribute Management</a> </li>
+          </ul>
+        
+        </li>
+
+
+<?php
+$title = "Donation Log";
+$pg = 'Donation';
+include('header.php');
+include('nav.php');
+?>
+
+<?php include('footer.php') ?>

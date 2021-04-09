@@ -1,0 +1,134 @@
+
+<!doctype html>
+<html>
+    <style>
+.page-item:last-child .page-link:hover, .page-item:first-child .page-link:hover {background: black;color: white;}
+div.dataTables_wrapper div.dataTables_length select {border-radius: 100px;background: url("down2.png") no-repeat;background-position: 90% 10px;}
+div.dataTables_wrapper div.dataTables_filter label {font-size: 0;position: relative;}
+.dataTables_filter label:after {content: "\f002";font-family: "Font Awesome 5 Free";font-weight: 600;position: absolute;right: 15px;font-size: 15px;color: black;top: 10px;bottom: 0;display: inline-flex;align-items: center;}
+div.dataTables_wrapper div.dataTables_filter input {height: 40px;min-width:300px;border-radius:100px;}
+.table-bordered th {border: 0;padding: 20px 0 !important;}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_desc_disabled:before {top: 20px;}
+table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:after {bottom: 20px;}
+.btn-group.mr-1.mb-1 {margin: 0 !important;}
+button.btn.btn-drop-table.btn-sm {padding: 0;margin: -5px 0 0 0;color: #9f9f9f;background: transparent;font-size: 16px;}
+table.dataTable td:last-child {padding: 20px 70px 20px 20px !important;text-transform: capitalize;}
+table .dropdown-menu {margin: 0;min-width: 80px;border: 0;box-shadow: 0 0 10px 0 rgb(0,0,0,.1);border-radius: 5px;}
+table .dropdown-item {font-size: 13px;color: #999999;padding: 0 10px;font-family: 'Poppins', sans-serif;}
+table .dropdown-item:hover {background: white;}
+table .dropdown-item i {margin: 0 6px 0 0;}
+.dataTables_length {margin: 20px 0 0 0;text-transform: capitalize;}
+div.dataTables_wrapper div.dataTables_filter input {box-shadow: none;margin: 10px 0 0 10px;}
+button.btn.btn-drop-table.btn-sm:focus {outline: none !important;box-shadow: none;}
+table#DataTables_Table_0{width: 100%;border-spacing: 0 26px;}
+div#DataTables_Table_0_info {padding: 0;margin: 16px 0 0 0;font-size: 14px;color: #666666;font-family: 'Poppins', sans-serif;text-transform: capitalize;}
+.page-item.disabled .page-link {border-color: #221f1f;}
+.page-item .page-link:hover {background: black;color:white;}
+.page-item:first-child .page-link,.page-item:last-child .page-link {min-width: 100px;text-align: center;background: white;}
+.page-item.active .page-link {background: black;border-color: black;color: white;}
+.page-item.disabled .page-link.next a {border-top: 0px !important;}
+li.paginate_button.page-item.next.disabled a {}
+.page-item .page-link {border: 1px solid #eeeeee !important;padding: 10px 15px;color: #c1c1c1;}
+.page-item:last-child .page-link {color: black;}
+.page-item:first-child .page-link {color: black;border-top-right-radius: 0;border-bottom-right-radius: 0px;}
+.page-item.active .page-link:hover {background: black;}
+
+tbody tr {box-shadow: 0 0 10px 0 rgb(0,0,0,.3);border-radius: 5px;}
+.payment-log .maain-tabble {margin: 30px 0 0 0;}
+td.dataTables_empty {text-align: center !important;}
+.table thead th {border-bottom:0px solid transparent;}
+.table td, .table th {border-top: 0px solid transparent;text-transform: uppercase;}
+.table thead th:last-child {text-align: right;}
+table thead tr {/* background-color: transparent !important; *//* box-shadow: 0 0 20px 6px rgba(62, 57, 107, 0.07), 0 2px 9px 0 rgba(62, 57, 107, 0.06); *//* border-top: 0; *//* border-radius: 100px; */}
+.table thead th:first-child {padding-left: 30px;}
+.table td:first-child,.o-wallet .table td:first-child {padding-left: 30px !important;padding-bottom: 0 !important;vertical-align: middle !important;padding-top: 0 !important;}
+table tbody tr td {color: #666666;font-size: 13px;padding: 20px 0 20px 10px !important;font-family: 'Poppins', sans-serif;vertical-align: middle !important;}
+.table thead th {vertical-align: bottom;border-bottom: none !important;border-top:  none !important;color: #000000;text-transform:uppercase;font-weight: 600;font-size: 13px;text-align: start;padding: 20px 10px;}
+.table-bordered td {padding: 20px 0 0 0 !important;border: 0;} 
+table{width: 100%;border-spacing: 0 26px;clear: both;margin-top: 6px !important;margin-bottom: 6px !important;max-width: none !important;border-collapse: separate !important;white-space: nowrap !important;text-overflow: ellipsis !important;} 
+span.circle {color: white;display: inline-block;margin: -12px 10px 0 0;text-align: center;padding: 7px 0px 0 1px;width: 25px;border-radius: 100px;height: 25px;}td.dataTables_empty {padding: 20px 0 21px 0;}
+html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike, strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}ol, ul {list-style: none;}blockquote, q {quotes: none;}blockquote:before, blockquote:after,q:before, q:after {content: '';content: none;}.table-responsive {padding: 0 0 20px 0 !important;}table {border-collapse: collapse;border-spacing: 0;}button{outline: none !important;-webkit-transition: all .3s ease-in-out !important;-o-transition: all .3s ease-in-out !important;transition: all .3s ease-in-out !important;cursor: pointer;}body {line-height: 1;-webkit-transition: all .3s ease-in-out;-o-transition:all .3s ease-in-out;transition: all .3s ease-in-out;font-family:'Poppins', sans-serif !important;}input{font-weight: 400;position: relative;height: 50px;color: black !important;font-size: 12px !important;margin: 0 0 15px 0;padding: 0 15px !important;border: 0px;font-family: 'Poppins', sans-serif;}input::placeholder,textarea:placeholder {color: #cccccc !important;text-transform: capitalize !important;}textarea{color: black;resize: none;}.form-control:focus {box-shadow: none;}img {object-fit: cover;object-position: center;transition: all .3s ease;} input[type="number"]::-webkit-inner-spin-button,input[type="number"]::-webkit-outer-spin-button {-webkit-appearance:none;}input[type=number] {-moz-appearance:textfield;}.my-60{margin: 60px 0;}p {font-size: 17px; font-weight: 400; margin-top: 35px;}body .gj-datepicker-bootstrap [role=right-icon] button .gj-icon, .gj-datepicker-bootstrap [role=right-icon] button .material-icons {top: 17px !important;margin: 0;outline: none;left: 30px;}input#datepicker-1, input#datepicker-2, input#datepicker-3,input#timepicker-1, input#datepicker-4, input#datepicker-5, input#datepicker-6, input#datepicker-7, input#datepicker-8, input#datepicker-9, input#datepicker-10, input#datepicker-11, input#datepicker-12, input#datepicker-13, input#datepicker-14,input#datepicker-15,input#datepicker-16,input#datepicker-17,input#datepicker-18{padding: 0px 20px 0 10px !important;background: white  !important;margin: 0 0 30px 0;}.dates .btn:not(:disabled):not(.disabled), .fc button:not(:disabled):not(.disabled) {position: absolute;border: 0;right: 0;top: 12px;}.gj-unselectable {margin: 0;z-index: 1020;}.gj-picker.gj-picker-bootstrap.timepicker button {background: #f7941e;border-radius: 100px;padding: 5px 20px;min-width: 60px;color: white;}.gj-picker.gj-picker-bootstrap.timepicker button:hover {background: #b96d12;}.gj-datepicker-bootstrap [role=right-icon] button {background: transparent !important;border: 0;top: -8px;margin: 0;right: 22px;padding: 0;}.gj-datepicker [role=right-icon] {position: absolute;right: 10px;top: 6px;}/*hover start here*/.boxer:hover img {-webkit-animation-name: hvr-hang-sink,hvr-hang;animation-name: hvr-hang-sink,hvr-hang;-webkit-animation-duration: .3s,1.5s;animation-duration: .3s,1.5s;-webkit-animation-delay: 0s,.3s;animation-delay: 0s,.3s;-webkit-animation-timing-function: ease-out,ease-in-out;animation-timing-function: ease-out,ease-in-out;-webkit-animation-iteration-count: 1,infinite;animation-iteration-count: 1,infinite;-webkit-animation-fill-mode: forwards;animation-fill-mode: forwards;-webkit-animation-direction: normal,alternate;animation-direction: normal,alternate;}select {font-weight: 500;text-transform: capitalize;-webkit-appearance: none;background: url(../images/ar.png) no-repeat 93%  center;padding: 0 0 0 10px;line-height: 16px;}
+table.dataTable thead .sorting:before, table.dataTable thead .sorting:after, table.dataTable thead .sorting_asc:before, table.dataTable thead .sorting_asc:after, table.dataTable thead .sorting_desc:before, table.dataTable thead .sorting_desc:after, table.dataTable thead .sorting_asc_disabled:before, table.dataTable thead .sorting_asc_disabled:after, table.dataTable thead .sorting_desc_disabled:before, table.dataTable thead .sorting_desc_disabled:after{
+    bottom: 20px !important;
+} 
+/*table css end*/
+
+    </style>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="datatables.min.css" type="text/css">
+</head>
+
+<body>
+<section class="payment-log p-60">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="session-header">
+          <h5>Payment Log </h5>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12">
+        <div class="maain-tabble table-responsive">
+          <table class="table zero-configuration">
+            <thead>
+              <tr>
+                <th>S.no</th>
+                <th>Session Id</th>
+                <th>Session Name</th>
+                <th>Payment Date</th>
+                <th>Trainer Id</th>
+                <th>Trainer Name</th>
+                <th>Charges</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>01</td>
+                <td>001</td>
+                <td>abc Session</td>
+                <td>May 2, 2020</td>
+                <td>001</td>
+                <td>Abc Trainer</td>
+                <td>$123</td>
+                <td>paid</td>
+              </tr>
+				<tr>
+                <td>01</td>
+                <td>001</td>
+                <td>abc Session</td>
+                <td>May 2, 2020</td>
+                <td>001</td>
+                <td>Abc Trainer</td>
+                <td>$123</td>
+                <td>refund</td>
+              </tr>
+				
+				
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!--payment log end here-->
+
+
+
+
+
+<script src="jquery.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+<script src="datatable-basic.js"></script>
+<script src="datatables.min.js"></script>
+</body>
+</html>

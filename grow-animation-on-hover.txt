@@ -1,0 +1,25 @@
+<section class="testimonial section-padding">
+<div class="item">
+	<div class="position-relative"> <img src="images/testimonial-1.png" class="img-fluid"> </div>
+            <div class="testimonial-text "> <img src="images/truck-s.png" class="testimonial-small mb-1 img-fluid">
+                <h2>We Provide Road</h2>
+                <h2>Freight In City</h2>
+            </div>
+            <a href="#_" class="testimonial-read">Read More</a>
+        </div>
+</section>
+
+
+section.testimonial .item:hover .position-relative img {
+  transform:scale(1.5);
+  transition:3.5s all ease-in-out;
+}
+section.testimonial .item .position-relative img {
+  transition:3.5s all ease-in-out;
+  border-radius:25px;
+}
+section.testimonial .item {
+  overflow: hidden;
+  border-radius:25px;
+  cursor:pointer;
+}

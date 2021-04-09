@@ -1,0 +1,40 @@
+ <p>
+	<input type="checkbox" id="c1" name="cb">
+	<label for="c1"></label>
+</p>
+
+
+
+
+
+input[type="checkbox"] {
+    visibility: hidden;
+  }
+  label {
+    cursor: pointer;
+  }
+  input[type="checkbox"] + label:before {
+    border: 2px solid #ebebeb;
+    background-color: #ebebeb;
+    content: "\00a0";
+    display: inline-block;
+    font: 16px/1em sans-serif;
+    height: 20px;
+    margin: 0 .25em 0 0;
+    padding: 0;
+    vertical-align: top;
+    width: 20px;
+  }
+  input[type="checkbox"]:checked + label:before {
+    background: #2FC403;
+    color: white;
+    content: "\2713";
+    text-align: center;
+  }
+  input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+  }
+  
+  input[type="checkbox"]:focus + label::before {
+      outline: rgb(59, 153, 252) auto 5px;
+  }
