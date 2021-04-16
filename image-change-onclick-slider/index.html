@@ -1,130 +1,192 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
 
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+      rel="stylesheet"
+    />
 
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css"
+    />
     <style>
-        .one-product {
-            width: 100%;
-        }
+      .one-product {
+        width: 100%;
+      }
 
+      .one-product__slider {
+        width: 75%;
+        padding: 0;
+        border: 0;
+        display: inline-block;
+        vertical-align: top;
+      }
+
+      .one-product__slider_navigation {
+        width: 20%;
+        display: inline-block;
+        vertical-align: top;
+        text-align: center;
+      }
+
+      .one-product__slider_navigation .item {
+        border: 0;
+        padding: 0.8rem 1.5rem;
+        margin: 0px 0px;
+        width: 100% !important;
+      }
+
+      .one-product__slider_navigation .item img {
+        max-width: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+
+      .one-product__slider .item img {
+        width: 100%;
+        object-fit: contain;
+        height: 100%;
+      }
+
+      button.slick-next {
+        border: 0;
+        background: 0;
+      }
+
+      button.slick-prev {
+        border: 0;
+        background: 0;
+      }
+      @media (max-width: 991px) {
         .one-product__slider {
-            width: 75%;
-            padding: 0;
-            border: 0;
-            display: inline-block;
-            vertical-align: top;
+          width: 100%;
         }
 
         .one-product__slider_navigation {
-            width: 20%;
-            display: inline-block;
-            vertical-align: top;
-            text-align: center;
+          width: 100%;
         }
 
+        .one-product {
+          display: flex;
+          flex-direction: column-reverse;
+          justify-content: center;
+          margin-top: 40px;
+        }
+      }
+      @media (max-width: 575px) {
         .one-product__slider_navigation .item {
-            border: 0;
-            padding: 0.8rem 1.5rem;
-            margin: 0px 0px;
-            width: 100% !important;
+          width: 132px !important;
         }
-
-        .one-product__slider_navigation .item img {
-            max-width: 100%;
-            width: 100%;
-            object-fit: contain;
+      }
+      @media (max-width: 400px) {
+        .one-product__slider_navigation .item {
+          width: 145px !important;
         }
-
-        .one-product__slider .item img {
-            width: 100%;
-            object-fit: contain;
-            height: 100%;
-        }
-
-        button.slick-next {
-            border: 0;
-            background: 0;
-        }
-
-        button.slick-prev {
-            border: 0;
-            background: 0;
-        }
+      }
     </style>
-</head>
+  </head>
 
-<body>
-
-
+  <body>
     <div class="container">
-        <div class="row">
-            <div class="col-lg-8">
-                <div class="one-product">
-                    <div class="one-product__slider_navigation">
-                        <div class="item">
-                            <img src="images/p-1.png" alt="" />
-                        </div>
-                        <div class="item">
-                            <img src="images/p-1.png" alt="" />
-                        </div>
-                        <div class="item">
-                            <img src="images/p-1.png" alt="" />
-                        </div>
-                        <div class="item">
-                            <img src="images/p-1.png" alt="" />
-                        </div>
-                        <div class="item">
-                            <img src="images/p-1.png" alt="" />
-                        </div>
-                    </div>
-                    <div class="one-product__slider">
-                        <div class="item">
-                            <a class="fancybox" data-fancybox="gallery" rel="group" href="images/p-1.png">
-                                <img src="images/main-p.png" alt="" />
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="fancybox" data-fancybox="gallery" rel="group" href="images/p-1.png">
-                                <img src="images/main-p.png" alt="" />
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="fancybox" data-fancybox="gallery" rel="group" href="images/p-1.png">
-                                <img src="images/main-p.png" alt="" />
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="fancybox" data-fancybox="gallery" rel="group" href="images/p-1.png">
-                                <img src="images/main-p.png" alt="" />
-                            </a>
-                        </div>
-                        <div class="item">
-                            <a class="fancybox" data-fancybox="gallery" rel="group" href="images/p-1.png">
-                                <img src="images/main-p.png" alt="" />
-                            </a>
-                        </div>
-                    </div>
-
-                </div>
+      <div class="row">
+        <div class="col-lg-8">
+          <div class="one-product">
+            <div class="one-product__slider_navigation">
+              <div class="item">
+                <img src="images/p-1.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/p-1.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/p-1.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/p-1.png" alt="" />
+              </div>
+              <div class="item">
+                <img src="images/p-1.png" alt="" />
+              </div>
             </div>
+            <div class="one-product__slider">
+              <div class="item">
+                <a
+                  class="fancybox"
+                  data-fancybox="gallery"
+                  rel="group"
+                  href="images/p-1.png"
+                >
+                  <img src="images/main-p.png" alt="" />
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  class="fancybox"
+                  data-fancybox="gallery"
+                  rel="group"
+                  href="images/p-1.png"
+                >
+                  <img src="images/main-p.png" alt="" />
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  class="fancybox"
+                  data-fancybox="gallery"
+                  rel="group"
+                  href="images/p-1.png"
+                >
+                  <img src="images/main-p.png" alt="" />
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  class="fancybox"
+                  data-fancybox="gallery"
+                  rel="group"
+                  href="images/p-1.png"
+                >
+                  <img src="images/main-p.png" alt="" />
+                </a>
+              </div>
+              <div class="item">
+                <a
+                  class="fancybox"
+                  data-fancybox="gallery"
+                  rel="group"
+                  href="images/p-1.png"
+                >
+                  <img src="images/main-p.png" alt="" />
+                </a>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
-        <script src="app.js"></script>
-</body>
-
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"
+    ></script>
+    <script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+    <script src="app.js"></script>
+  </body>
 </html>
