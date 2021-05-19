@@ -69,6 +69,18 @@ ul{list-style: none;}
 .black{color: black;}
 .white{color: white;}
 /* ================== Colors End ==================*/
+/* ================== Footer Start ==================*/
+footer{background-image: url(../images/footer-back.png);background-repeat: no-repeat;background-position: center;background-size: cover;margin-top: 127px;padding-top: 109px;}
+footer p{line-height: 30px;}
+footer h6{color: #7D7D7D;font-size: 12px;}
+footer a{color: #A7A7A7;font-size: 16px;text-decoration: none;}
+footer a:hover{color: white;text-decoration: none;}
+.footer-bottom p{color: black;border-top: 1px solid #303030;padding: 30px 0;margin-top: 36px;font-size: 18px;}
+.input-field2 {background-color: black;width: 100%;padding: 10px;outline: none;border:none;}
+.email-container2{background-color: white;display: -ms-flexbox;display: flex;width: 100%;margin-bottom: 40px;}
+.icon22{font-size: 15px;padding: 12px 10px;background-color: #C11F26;color: white;text-align: center;border: 1px solid #C11F26;}
+.icon22:hover{color: #C11F26;background-color: white;border: 1px solid #C11F26;transition: 0.3s ease-in-out;}
+/* ================== Footer End  ==================*/
 /* ======================================================================= Global End =========================================== */
 /* ======================= Media Queries =========================================== */
 @media(max-width:991px){
