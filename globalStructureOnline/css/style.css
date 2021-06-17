@@ -81,6 +81,15 @@ footer a:hover{color: white;text-decoration: none;}
 .icon22{font-size: 15px;padding: 12px 10px;background-color: #C11F26;color: white;text-align: center;border: 1px solid #C11F26;}
 .icon22:hover{color: #C11F26;background-color: white;border: 1px solid #C11F26;transition: 0.3s ease-in-out;}
 /* ================== Footer End  ==================*/
+/* ================== Nav Start here  ==================*/
+.custom-nav{
+background-color: blue !important;
+}
+.navbar-toggler:focus {
+  outline: none;
+  border: none;
+}
+/* ================== Nav End here  ==================*/
 /* ======================================================================= Global End =========================================== */
 /* ======================= Media Queries =========================================== */
 @media(max-width:991px){
