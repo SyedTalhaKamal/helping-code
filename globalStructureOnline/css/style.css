@@ -85,6 +85,9 @@ footer a:hover{color: white;text-decoration: none;}
 .custom-nav{
 background-color: blue !important;
 }
+.navbar-toggler {
+  border: none;
+}
 .navbar-toggler:focus {
   outline: none;
   border: none;
