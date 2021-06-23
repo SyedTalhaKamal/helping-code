@@ -1,137 +1,171 @@
-
-<!doctype html>
+<!DOCTYPE html>
 <html>
-    <style>
-/* Table Start here */
-.maain-tabble{margin: 20px 0;}
-.maain-tabble .table thead th,.maain-tabble th, .maain-tabble td{border: none;}
-.maain-tabble th{color: #093346;font-size: 13px;font-weight: 700;font-family: "Jost";} 
-.maain-tabble td{color: #999999;font-size: 15px;font-weight: 500;font-family: "Jost";} 
-.maain-tabble thead{margin-bottom: 10px;} 
-.maain-tabble .table {
-  width: 100%;
-  border-spacing: 0px 26px;
-}
-.maain-tabble tbody tr{box-shadow:0px 0px 2px 1px #ececec;} 
-.maain-tabble .dataTables_filter,.maain-tabble .dataTables_length{margin-top: 45px;}
-.table td, .table th {
-  vertical-align: middle;
-}
-.btn-group>.btn-group:not(:last-child)>.btn, .btn-group>.btn:not(:last-child):not(.dropdown-toggle) {
-  background-color: transparent;
-  color: #999999;
-  font-size: 20px;
-}
-div.dataTables_wrapper div.dataTables_filter label {
-  font-size: 0;
-}
-.dataTables_filter input {
-  width: 317px !important;
-  padding: 5px 10px;
-  border: 1px solid #E8E7E7;
-  border-radius: 10px;
-  height: 45px;
-  color: #929292;
-}
-.dataTables_filter label::after {
-  font-family: "Font Awesome 5 Free";
-  content: "";
-  position: absolute;
-  font-size: 15px;
-  color: rgb(203, 203, 203);
-  width: 20px;
-  height: 30px;
-  bottom: 0px;
-  display: inline-flex;
-  align-items: center;
-  font-weight: 900;
-  top: 52px;
-  right: 7px;
-}
-/*table css end*/
+  <style>
+    /* Table Start here */
+    .maain-tabble {
+      margin: 20px 0;
+    }
+    .maain-tabble .table thead th,
+    .maain-tabble th,
+    .maain-tabble td {
+      border: none;
+    }
+    .maain-tabble th {
+      color: #093346;
+      font-size: 13px;
+      font-weight: 700;
+      font-family: "Jost";
+    }
+    .maain-tabble td {
+      color: #999999;
+      font-size: 15px;
+      font-weight: 500;
+      font-family: "Jost";
+    }
+    .maain-tabble thead {
+      margin-bottom: 10px;
+    }
+    .maain-tabble .table {
+      width: 100%;
+      border-spacing: 0px 26px;
+    }
+    .maain-tabble tbody tr {
+      box-shadow: 0px 0px 2px 1px #ececec;
+    }
+    .maain-tabble .dataTables_filter,
+    .maain-tabble .dataTables_length {
+      margin-top: 45px;
+    }
+    .table td,
+    .table th {
+      vertical-align: middle;
+    }
+    .btn-group > .btn-group:not(:last-child) > .btn,
+    .btn-group > .btn:not(:last-child):not(.dropdown-toggle) {
+      background-color: transparent;
+      color: #999999;
+      font-size: 20px;
+    }
+    div.dataTables_wrapper div.dataTables_filter label {
+      font-size: 0;
+    }
+    .dataTables_filter input {
+      width: 317px !important;
+      padding: 5px 10px;
+      border: 1px solid #e8e7e7;
+      border-radius: 10px;
+      height: 45px;
+      color: #929292;
+    }
+    .dataTables_filter label::after {
+      font-family: "Font Awesome 5 Free";
+      content: "";
+      position: absolute;
+      font-size: 15px;
+      color: rgb(203, 203, 203);
+      width: 20px;
+      height: 30px;
+      bottom: 0px;
+      display: inline-flex;
+      align-items: center;
+      font-weight: 900;
+      top: 52px;
+      right: 7px;
+    }
+    /*table css end*/
+  </style>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="datatables.min.css" type="text/css" />
+  </head>
 
-    </style>
-<head>
-	<meta charset="utf-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" />
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet">
-	<link rel="stylesheet" href="datatables.min.css" type="text/css">
-</head>
-
-<body>
-<section class="payment-log p-60">
-  <div class="container">
-    <div class="row">
-      <div class="col-12">
-        <div class="session-header">
-          <h5>Payment Log </h5>
+  <body>
+    <section class="payment-log p-60">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="session-header">
+              <h5>Payment Log</h5>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-12">
+            <div class="maain-tabble table-responsive">
+              <table class="table zero-configuration">
+                <thead>
+                  <tr>
+                    <th>S.no</th>
+                    <th>Session Id</th>
+                    <th>Session Name</th>
+                    <th>Payment Date</th>
+                    <th>Trainer Id</th>
+                    <th>Trainer Name</th>
+                    <th>Charges</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>01</td>
+                    <td>001</td>
+                    <td>abc Session</td>
+                    <td>May 2, 2020</td>
+                    <td>001</td>
+                    <td>Abc Trainer</td>
+                    <td>$123</td>
+                    <td>
+                      <div class="btn-group mr-1 mb-1">
+                        <button
+                          type="button"
+                          class="btn btn-drop-table btn-sm"
+                          data-toggle="dropdown"
+                        >
+                          <i class="fa fa-ellipsis-v"></i>
+                        </button>
+                        <div class="dropdown-menu">
+                          <a
+                            class="dropdown-item"
+                            href="active-user-details.php"
+                            ><i class="fa fa-eye"></i>View
+                          </a>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>01</td>
+                    <td>001</td>
+                    <td>abc Session</td>
+                    <td>May 2, 2020</td>
+                    <td>001</td>
+                    <td>Abc Trainer</td>
+                    <td>$123</td>
+                    <td>refund</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="row">
-      <div class="col-12">
-        <div class="maain-tabble table-responsive">
-          <table class="table zero-configuration">
-            <thead>
-              <tr>
-                <th>S.no</th>
-                <th>Session Id</th>
-                <th>Session Name</th>
-                <th>Payment Date</th>
-                <th>Trainer Id</th>
-                <th>Trainer Name</th>
-                <th>Charges</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>01</td>
-                <td>001</td>
-                <td>abc Session</td>
-                <td>May 2, 2020</td>
-                <td>001</td>
-                <td>Abc Trainer</td>
-                <td>$123</td>
-                <td>
-                  <div class="btn-group mr-1 mb-1">
-                    <button type="button" class="btn btn-drop-table btn-sm" data-toggle="dropdown"><i class="fa fa-ellipsis-v"></i></button>
-                    <div class="dropdown-menu">
-                        <a class="dropdown-item" href="active-user-details.php"><i class="fa fa-eye"></i>View </a>
-                    </div>
-                </td>
-              </tr>
-				<tr>
-                <td>01</td>
-                <td>001</td>
-                <td>abc Session</td>
-                <td>May 2, 2020</td>
-                <td>001</td>
-                <td>Abc Trainer</td>
-                <td>$123</td>
-                <td>refund</td>
-              </tr>
-				
-				
-            </tbody>
-          </table>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!--payment log end here-->
+    <!--payment log end here-->
 
-
-
-
-
-<script src="jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
-<script src="datatable-basic.js"></script>
-<script src="datatables.min.js"></script>
-</body>
+    <script src="jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="datatable-basic.js"></script>
+    <script src="datatables.min.js"></script>
+  </body>
 </html>
