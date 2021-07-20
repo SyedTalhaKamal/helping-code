@@ -1,0 +1,707 @@
+   /* ================== Cart Start here  ==================*/
+   .shopping-cart-wrap {
+       border-spacing: 0 15px;
+       border-collapse: separate;
+       white-space: nowrap;
+   }
+
+   .shopping-cart-wrap thead tr th {
+       border: unset !important;
+   }
+
+   table tbody tr {
+       border: 1px solid #ebebeb !important;
+       box-shadow: 0px 0px 5px 0px rgb(0 0 0 / 10%);
+   }
+
+   .shopping-cart-wrap tbody tr td {
+       border-top: 0;
+   }
+
+   .table tbody td {
+       padding: 13px 20px;
+       color: #666666;
+       font-size: 13px;
+       vertical-align: middle;
+   }
+
+   .table tbody td p {
+       color: #666666;
+       font-size: 15px;
+       font-weight: 400 !important;
+   }
+
+   tbody tr td .img-wrap {
+       border: none;
+       padding: 0;
+       width: 99px;
+       height: 99px;
+   }
+
+   .plus-minus-div {
+       margin: 0px 0px 25px 0px;
+       display: flex;
+       align-items: center;
+   }
+
+   .plus-minus-div #decrease {
+       border-radius: 50px 0 0 50px;
+   }
+
+   .value-button {
+       display: flex;
+       border: 1px solid #ddd;
+       margin: 0px;
+       width: 35px;
+       height: 40px;
+       text-align: center;
+       vertical-align: middle;
+       padding: 7px 0;
+       background: white;
+       -webkit-touch-callout: none;
+       -webkit-user-select: none;
+       -khtml-user-select: none;
+       -moz-user-select: none;
+       -ms-user-select: none;
+       user-select: none;
+       align-items: center;
+       justify-content: center;
+       cursor: pointer;
+   }
+
+   input#number {
+       text-align: center;
+       border: none;
+       border-top: 1px solid #ddd;
+       border-bottom: 1px solid #ddd;
+       margin: 0px;
+       width: 60px;
+       height: 40px;
+       position: relative;
+       font-family: "Poppins";
+   }
+
+   input#number:focus {
+       outline: none;
+   }
+
+   .plus-minus-div #increase {
+       border-radius: 0 50px 50px 0;
+   }
+
+   .cart-circle {
+       background-color: #232423;
+       border-radius: 100%;
+       color: white;
+       width: 30px;
+       height: 30px;
+       text-align: center;
+       line-height: 28px;
+       border: 1px solid #232423;
+   }
+
+   .cart-circle-2 {
+       background-color: #ff7a41;
+       border-radius: 100%;
+       color: white;
+       width: 30px;
+       height: 30px;
+       text-align: center;
+       line-height: 28px;
+       border: 1px solid #ff7a41;
+   }
+
+   input::-webkit-outer-spin-button,
+   input::-webkit-inner-spin-button {
+       -webkit-appearance: none;
+   }
+
+   /* Firefox */
+   input[type="number"] {
+       -moz-appearance: textfield;
+   }
+
+   .blue-bg {
+       background-color: #232423;
+       color: white;
+       font-size: 20px;
+       font-weight: 500;
+       margin-bottom: 35px;
+   }
+
+   .checkout-card {
+       box-shadow: 0px 3px 7px rgb(0 0 0 / 10%);
+       border-radius: 5px;
+   }
+
+   .checkout-card-p {
+       font-size: 15px;
+       color: black;
+       font-weight: 400;
+       margin-bottom: 35px;
+   }
+
+   .checkout-card-value {
+       font-size: 15px;
+       color: black;
+       font-weight: 500;
+       margin-bottom: 35px;
+   }
+
+   .cart-total {
+       color: #ff7a41;
+       font-size: 15px;
+       font-weight: 500;
+   }
+
+   /* ================== Cart End here  ==================*/
+   /*=============CHECKOUT=============*/
+   #msform {
+       margin: 0 auto 50px;
+       position: relative;
+       padding: 20px 30px;
+       background-color: white;
+       border: 1px solid #ebebeb;
+   }
+
+   #progressbar {
+       margin-bottom: 30px;
+       counter-reset: step;
+       display: flex;
+       justify-content: space-between;
+   }
+
+   #progressbar li {
+       list-style-type: none;
+       text-transform: uppercase;
+       font-size: 9px;
+       /* width: 44px; */
+       position: relative;
+       padding-top: 45px !important;
+       padding: 0;
+       border-bottom: 0;
+       z-index: 99;
+   }
+
+   #progressbar li.active:before {
+       border: 8px solid #b5d8f0;
+   }
+
+   #progressbar li.active:after,
+   #progressbar li.active:before {
+       background: #6cb2e2;
+       color: #fff;
+   }
+
+   #progressbar li:before {
+       content: counter(step);
+       counter-increment: step;
+       width: 100px;
+       height: 100px;
+       display: block;
+       font-size: 10px;
+       color: white;
+       background: #90c5e9;
+       margin: 0 auto 5px auto;
+       border-radius: 50%;
+       border: 8px solid #b5d8f0;
+       box-sizing: border-box;
+       text-indent: -9970px;
+       /* display: flex; */
+       /* align-items: center; */
+       /* justify-content: center; */
+   }
+
+   #progressbar li h3 {
+       position: absolute;
+       top: 10px;
+       left: 50%;
+       transform: translateX(-50%);
+       /* font-weight: 100; */
+       color: #000;
+       /* font-family:
+    "SharpSansNo1-Bold"; */
+       text-align: center;
+       font-size: 20px;
+   }
+
+   #progressbar li.active i {
+       opacity: 1;
+   }
+
+   #progressbar li i {
+       width: 51px;
+       height: 43px;
+       display: inline-block;
+       position: absolute;
+       z-index: 99;
+       top: 77px;
+       left: 0;
+       right: 0;
+       margin: auto;
+       opacity: .5;
+   }
+
+   #progressbar li:after {
+       content: "";
+       width: 163px;
+       height: 3px;
+       background: #b5d8f0;
+       position: absolute;
+       left: -174px;
+       top: 94px;
+       z-index: -1;
+   }
+
+   #progressbar li:first-child:after {
+       content: none;
+   }
+
+   fieldset {
+       position: relative !important;
+   }
+
+   #msform fieldset:not(:first-of-type) {
+       display: none;
+   }
+
+   .fs-title {
+       color: #108d46;
+       font-family: "SharpSansNo1-Bold";
+       font-size: 35px;
+       text-transform: capitalize;
+       margin: 20px 0 10px 0;
+   }
+
+   .fs-subtitle {
+       color: #ea242a;
+       font-family: "SharpSansNo1-Bold";
+       font-size: 20px;
+   }
+
+   .action-button {
+       background: #108d46;
+       color: #fff;
+       border: 0;
+       font-size: 16px;
+       font-family: "SharpSansNo1-Bold";
+       min-width: 170px;
+       border-radius: 20px;
+       padding: 12px 0px;
+       cursor: pointer;
+   }
+
+   #msform input#shipAd+label {
+       font-family: "Jost" !important;
+       color: #333333 !important;
+       font-size: 16px !important;
+       font-weight: 400;
+   }
+
+   #progressbar li.active::after {
+       background: #6cb2e2;
+   }
+
+   .expiry-field .gj-datepicker.gj-datepicker-bootstrap.gj-unselectable.input-group {
+       background: #fff;
+       border: 0;
+   }
+
+   input#expiry-date[readonly] {
+       background: #fff;
+       border-radius: 20px;
+   }
+
+   .expiry-field span.input-group-append button.btn.btn-outline-secondary.border-left-0 i.gj-icon {
+       color: #c9c8c8 !important;
+   }
+
+   .btn-outline-secondary:not(:disabled):not(.disabled).active,
+   .btn-outline-secondary:not(:disabled):not(.disabled):active,
+   .show>.btn-outline-secondary.dropdown-toggle {
+       background: transparent;
+       border: 0;
+   }
+
+   input.previous.action-button {
+       background: #ea242a;
+   }
+
+   ul#progressbar li img.img-fluid {
+       position: absolute;
+       top: 62px;
+       left: 24px;
+   }
+
+   .blue-text {
+       color: #10365b;
+   }
+
+   #msform label {
+       font-family: 'Poppins';
+       font-weight: 500;
+       font-size: 14px;
+       margin-bottom: 10px;
+   }
+
+   #msform input#shipAd+label {
+       font-family: "Poppins" !important;
+       color: #666666 !important;
+       font-size: 16px !important;
+       font-weight: 400;
+   }
+
+   .cart-list {
+       padding: 20px;
+       background: white;
+       box-shadow: 0px 3px 8px rgb(0 0 0 / 10%);
+   }
+
+   .cart-head {
+       background-color: #2a3c72;
+       padding: 20px;
+       text-transform: uppercase;
+       color: white;
+       text-align: center;
+       border-radius: 5px 5px 0 0;
+   }
+
+   .user-card {
+       background: url(../images/user-card.png) no-repeat;
+       background-size: 74%;
+       background-position: top center;
+   }
+
+   .payment {
+       background: url(../images/cards.png) no-repeat;
+       background-size: 74%;
+       background-position: top center;
+   }
+
+   .check {
+       background: url(../images/check.png) no-repeat;
+       background-size: 74%;
+       background-position: top center;
+   }
+
+   #msform input.site-input,
+   input.site-input.input-shadow {
+       box-shadow: 0px 2px 10px rgb(0, 0, 0, .1);
+   }
+
+   .site-input {
+       border: 1px solid #ebebeb;
+       border-radius: 35px;
+       resize: none;
+       background-color: white;
+       display: block;
+       width: 100%;
+       color: #666666;
+       appearance: none;
+   }
+
+   .form-field {
+       position: relative;
+       margin-bottom: 25px;
+   }
+
+   /* Checkout end Here */
+   /* Product Details Start Here */
+.product-details {
+    margin: 200px 0 35px 0;
+  }
+  
+  .product-pills {
+    margin-bottom: 193px;
+  }
+  
+  .breadcrumb {
+    background-color: transparent;
+    font-weight: 500;
+    margin-bottom: 0;
+    padding: 0;
+  }
+  
+  .breadcrumb li a {
+    color: #666666;
+    font-size: 18px;
+    font-weight: 400;
+  }
+  
+  .breadcrumb li a:hover {
+    text-decoration: none;
+  }
+  
+  .breadcrumb .active a {
+    color: #FF7A41;
+  }
+  
+  .slider-card img {
+    width: 100%;
+    height: 495px;
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .item.item-sliderNav img {
+    width: 123px;
+    height: 128px;
+    object-fit: contain;
+    object-position: center;
+  }
+  
+  .product-name {
+    color: #000;
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .product-code-h {
+    color: #666666;
+    font-weight: 500;
+    font-size: 15px;
+  }
+  
+  .product-code-c {
+    color: #ED1C24;
+    font-size: 18px;
+  }
+  
+  .product-price {
+    font-size: 25px;
+    color: #000;
+    margin-top: 17px;
+  }
+  
+  .product-description {
+    color: #666666;
+    font-size: 14px;
+    margin-top: 22px;
+  }
+  
+  .product-color {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 22px;
+  }
+  
+  .product-size {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 22px;
+  }
+  
+  .product-quantity {
+    font-size: 18px;
+    color: black;
+    margin-bottom: 10px;
+  }
+  
+  [type="radio"]:checked,
+  [type="radio"]:not(:checked) {
+    position: absolute;
+    left: -9999px;
+  }
+  
+  [type="radio"]:checked+label,
+  [type="radio"]:not(:checked)+label {
+    position: relative;
+    padding-left: 28px;
+    cursor: pointer;
+    line-height: 20px;
+    display: inline-block;
+    color: #666;
+  }
+  
+  [type="radio"]:checked+label:before,
+  [type="radio"]:not(:checked)+label:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 18px;
+    height: 18px;
+    border: 1px solid #ddd;
+    border-radius: 100%;
+    background: #fff;
+  }
+  
+  [type="radio"]:checked+label:after,
+  [type="radio"]:not(:checked)+label:after {
+    content: '';
+    width: 12px;
+    height: 12px;
+    background: #ff7a41;
+    position: absolute;
+    top: 3px;
+    left: 3px;
+    border-radius: 100%;
+    -webkit-transition: all 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  
+  [type="radio"]:not(:checked)+label:after {
+    opacity: 0;
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  }
+  
+  [type="radio"]:checked+label:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  
+  /* ======================= Pills =========================================== */
+  .product-pills .row-1 {
+    border-bottom: 1px solid #cccccc;
+    margin-top: 51px;
+  }
+  
+  .nav-pills .nav-link.active,
+  .nav-pills .show>.nav-link {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 500;
+    background-color: white;
+    border-bottom: 1px solid #FF7A41;
+    border-radius: 0px;
+    padding: 0 30px 25px 30px;
+  }
+  
+  .nav-pills .nav-link {
+    font-size: 16px;
+    color: #333333;
+    font-weight: 500;
+    background-color: white;
+    text-align: center;
+  }
+  
+  .product-pills .nav-link {
+    padding: 0px 30px 15px 30px;
+  }
+  
+  .product-pills h2 {
+    font-size: 25px;
+    color: #666666;
+    padding: 50px 0 40px 0;
+  }
+  
+  .product-pills p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 22px;
+    font-weight: 500;
+  }
+  
+  .product-pills .pa-2 {
+    margin-top: 42px;
+  }
+  
+  /* ======================= Pills =========================================== */
+  
+  /* Product Details End Here */
+   @media(max-width:1199px) {
+       #progressbar li:after {
+           width: 110px;
+           left: -117px;
+       }
+
+   }
+
+   @media(max-width:991px) {
+       #progressbar li:after {
+           width: 144px;
+           left: -154px;
+       }
+       .slider-card img {
+        height: 325px;
+        object-fit: cover;
+      }
+    
+      .item.item-sliderNav img {
+        width: 153px;
+        height: 88px;
+        object-fit: cover;
+      }
+    
+      .product-pills .pa-2 {
+        margin-top: 20px;
+      }
+    
+      .product-name {
+        margin-bottom: 10px;
+      }
+    
+      .product-price {
+        margin-top: 10px;
+      }
+    
+      .product-description {
+        margin-top: 10px;
+      }
+   }
+
+   @media(max-width:767px) {
+       #progressbar li:after {
+           width: 64px;
+           left: -69px;
+       }
+       .slider-card img {
+        height: 225px;
+        object-fit: cover;
+      }
+   }
+
+   @media(max-width:575px) {
+       #progressbar li:after {
+           display: none;
+       }
+
+       #progressbar li:before {
+           width: 50px;
+           height: 50px;
+       }
+
+       #progressbar li h3 {
+           font-size: 14px;
+       }
+
+       #progressbar li i {
+           width: 26px;
+           height: 22px;
+           top: 52px;
+       }
+
+       #progressbar li {
+           padding-top: 35px !important;
+       }
+       .slider-card img {
+        height: 155px;
+        object-fit: cover;
+      }
+    
+      .item.item-sliderNav img {
+        width: 80px;
+        height: 58px;
+        object-fit: cover;
+      }
+    
+      .nav-pills .nav-link.active,
+      .nav-pills .show>.nav-link {
+        font-size: 13px;
+        padding: 0 10px 15px 10px;
+      }
+    
+      .product-pills .nav-link {
+        padding: 0px 10px 15px 10px;
+      }
+    
+      .nav-pills .nav-link {
+        font-size: 13px;
+      }
+    
+      .breadcrumb li a {
+        font-size: 16px;
+      }
+   }

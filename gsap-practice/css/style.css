@@ -1,0 +1,10 @@
+.container{
+  margin-top: 150px;
+}
+.ball{
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  object-position: center;
+  margin-top: 1000px;
+}
