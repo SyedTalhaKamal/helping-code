@@ -32,12 +32,6 @@ body::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
 body::-webkit-scrollbar{width: 12px;background-color: #F5F5F5;}
 body::-webkit-scrollbar-thumb{border-radius: 10px;border-top-left-radius:0px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #C11F26;}
 body{font-family: 'Poppins', sans-serif;}
-.section-Padding{padding: 80px 0;}
-.banner-heading{font-size: 60px;color: #231F20;color: #C11F26;font-weight: 700;}
-.banner-heading span{color: #C11F26;}
-.section-heading{font-size: 40px;color: #231F20;font-weight: 600;}
-.section-heading::before{display: inline-block;content: "";border-top: .1rem solid #C11F26;width: 9rem;margin: -0.5rem 1rem;transform: translateY(-1rem);}
-.section-sub-heading{font-size: 20px;color: #C11F26;font-weight: 600;}
 ul{list-style: none;}
 .social-ul>li {display: inline-block;margin-right: 34px;}
 .socialIcons {font-size: 28px;color: #030522;text-align: center;transition: 0.2s ease-in-out;}
@@ -45,22 +39,7 @@ ul{list-style: none;}
 /* ================== Fonts Family Start ==================*/
 .fp{font-family: 'Poppins', sans-serif;}
 /* ================== Fonts Family End ==================*/
-/* ================== Fonts Style Start ==================*/
-.bold{font-weight: 700;}
-.sbold{font-weight: 600;}
-.medium{font-weight: 500;}
-.normal{font-weight: 400;}
-.light{font-weight: 300;}
-.f-15{font-size: 15px;}
-.f-16{font-size: 16px;}
-.f-18{font-size: 18px;}
-.f-20{font-size: 20px;}
-.f-22{font-size: 22px;}
-.f-25{font-size: 25px;}
-.f-30{font-size: 30px;}
-.capital{text-transform: capitalize;}
-.upper{text-transform:uppercase;}
-/* ================== Fonts Style End ==================*/
+
 /* ================== Buttons Start ==================*/
 .red-btn{font-size: 18px;font-weight: 500;padding: 10px 30px;border-radius: 15px;background-color: #C11F26;border: 1px solid #C11F26;transition: 0.3s ease-in-out;}
 .red-btn:hover{background-color: black;border: 1px solid black;transition: 0.3s ease-in-out;}
@@ -96,17 +75,11 @@ background-color: blue !important;
 /* ======================================================================= Global End =========================================== */
 /* ======================= Media Queries =========================================== */
 @media(max-width:991px){
-  .section-Padding {padding: 50px 0;}
-  .banner-heading {font-size: 50px;}
-  .section-heading {font-size: 35px;}
+
 }
 @media(max-width:767px){
-  .section-Padding {padding: 30px 0;}
-  .banner-heading {font-size: 40px;}
-  .section-heading {font-size: 30px;}
+
 }
 @media(max-width:576px){
-  .section-Padding {padding: 20px 0;}
-  .banner-heading {font-size: 30px;}
-  .section-heading {font-size: 25px;}
+
 }
