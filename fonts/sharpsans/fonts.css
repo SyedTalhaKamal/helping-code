@@ -1,0 +1,60 @@
+@font-face {
+    font-family: 'Sharp Sans No1';
+    src: url('SharpSansNo1-Black.eot');
+    src: url('SharpSansNo1-Black.eot?#iefix') format('embedded-opentype'),
+        url('SharpSansNo1-Black.woff2') format('woff2'),
+        url('SharpSansNo1-Black.woff') format('woff'),
+        url('SharpSansNo1-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Sans No1';
+    src: url('SharpSansNo1-Bold.eot');
+    src: url('SharpSansNo1-Bold.eot?#iefix') format('embedded-opentype'),
+        url('SharpSansNo1-Bold.woff2') format('woff2'),
+        url('SharpSansNo1-Bold.woff') format('woff'),
+        url('SharpSansNo1-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Sans No1';
+    src: url('SharpSansNo1-Semibold.eot');
+    src: url('SharpSansNo1-Semibold.eot?#iefix') format('embedded-opentype'),
+        url('SharpSansNo1-Semibold.woff2') format('woff2'),
+        url('SharpSansNo1-Semibold.woff') format('woff'),
+        url('SharpSansNo1-Semibold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Sans No1 Book';
+    src: url('SharpSansNo1-Book.eot');
+    src: url('SharpSansNo1-Book.eot?#iefix') format('embedded-opentype'),
+        url('SharpSansNo1-Book.woff2') format('woff2'),
+        url('SharpSansNo1-Book.woff') format('woff'),
+        url('SharpSansNo1-Book.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Sharp Sans No1';
+    src: url('SharpSansNo1-Medium.eot');
+    src: url('SharpSansNo1-Medium.eot?#iefix') format('embedded-opentype'),
+        url('SharpSansNo1-Medium.woff2') format('woff2'),
+        url('SharpSansNo1-Medium.woff') format('woff'),
+        url('SharpSansNo1-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
