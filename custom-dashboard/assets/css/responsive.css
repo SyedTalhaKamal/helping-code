@@ -1,0 +1,189 @@
+@media only screen and (max-width: 1500px) {
+  .top-card-sub .top-detail h5 {
+    font-size: 18px;
+  }
+  .top-card-sub .top-detail svg {
+    height: 45px;
+    width: 45px;
+  }
+  .top-card-sub .bottom-detail h1 {
+    font-size: 30px;
+    margin-top: 10px;
+  }
+  .chart-main-div .revenue {
+    left: -3%;
+  }
+  .location-text .line {
+    width: 70px;
+  }
+}
+@media only screen and (max-width: 1366px) {
+  .top-card-sub {
+    padding: 20px 12px;
+  }
+  .top-card-sub .top-detail h5 {
+    font-size: 16px;
+  }
+  .top-card-sub .top-detail svg {
+    height: 35px;
+    width: 35px;
+  }
+  .top-card-sub .bottom-detail h1 {
+    font-size: 25px;
+    margin-top: 10px;
+  }
+  .chart-main-div .revenue {
+    left: -4%;
+  }
+  .trip-btn {
+    font-size: 12px;
+  }
+}
+@media only screen and (max-width: 1300px) {
+  .trip-btn {
+    font-size: 11px;
+  }
+  .location-text {
+    font-size: 11px;
+  }
+  .view-trips-main .panding-payment {
+    font-size: 13px;
+  }
+}
+@media only screen and (max-width: 1199px) {
+  .login-main-title h2 {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  .top-card-sub .top-detail {
+    flex-direction: column-reverse;
+    gap: 7px;
+  }
+  .chart-main-div .revenue {
+    left: -5%;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .main-general-heading {
+    color: var(--color-black);
+    font-size: 25px;
+    font-weight: bold;
+  }
+  .custom-select-dropdown,
+  .custom-showentries-dropdown,
+  .custom-input-date,
+  .custom-input-search,
+  .custom-input-search::placeholder {
+    height: 40px;
+    font-size: 14px;
+  }
+  .main-transparent-btn,
+  .main-fill-btn-grey,
+  .main-fill-btn {
+    font-size: 12px;
+  }
+  .login-main-title h2 {
+    font-size: 25px;
+    letter-spacing: 2px;
+  }
+  .multi-color-bg:before {
+    top: -20px;
+    right: -50px;
+    height: 70px;
+    width: 110px;
+  }
+  .multi-color-bg:after {
+    bottom: -30px;
+    left: -30px;
+    height: 90px;
+    width: 100px;
+  }
+  .top-card-sub .top-detail h5 {
+    font-size: 15px;
+  }
+  .top-card-sub .bottom-detail h1 {
+    font-size: 22px;
+  }
+  .chart-main-div .revenue,
+  .chart-main-div .month {
+    display: none;
+  }
+  .trip-btn {
+    padding: 0px 15px;
+  }
+  .border-bottom, .border-top{
+    border-bottom: none !important;
+    border-top: none !important;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .login-main-title h2 {
+    font-size: 22px;
+    letter-spacing: 0px;
+  }
+  .custom-label {
+    font-size: 16px;
+  }
+  .main-transparent-btn {
+    line-height: 35px;
+    height: 35px;
+  }
+  .active-inactive,
+  .active-inactive-red {
+    justify-content: flex-start;
+  }
+  .profile-detail-main .profile-detail h4 {
+    font-size: 22px;
+}
+.coming-soon-img{
+  height: 100%;
+}
+}
+
+@media only screen and (max-width: 575px) {
+  .logo-box img {
+    width: 150px;
+  }
+  .main-transparent-btn,
+  .main-fill-btn,
+  .main-fill-btn-grey {
+    display: block;
+    text-align: center;
+  }
+  .custom-select-dropdown,
+  .custom-input-date,
+  .custom-input-search {
+    max-width: 100%;
+  }
+  .detail-image-box {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  .multi-color a {
+    width: 100%;
+    max-width: 100%;
+  }
+  .location-text .line {
+    width: 0px;
+    border: none;
+  }
+  .location-text {
+    font-size: 12px;
+  }
+  .request3 .location-text {
+    font-size: 12px;
+  }
+  .booking-status .profile-detail {
+    width: 100%;
+}
+}
+
+@media only screen and (max-width: 450px) {
+  .profile-detail-main {
+    align-items: start;
+    flex-direction: column;
+  }
+}
