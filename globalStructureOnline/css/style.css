@@ -65,15 +65,35 @@ footer a:hover{color: white;text-decoration: none;}
 .icon22:hover{color: #C11F26;background-color: white;border: 1px solid #C11F26;transition: 0.3s ease-in-out;}
 /* ================== Footer End  ==================*/
 /* ================== Nav Start here  ==================*/
-.custom-nav{
-background-color: blue !important;
+.custom-nav {
+  background-color: transparent !important;
 }
+
 .navbar-toggler {
   border: none;
 }
+
 .navbar-toggler:focus {
   outline: none;
   border: none;
+}
+
+.custom-nav .navbar-nav .nav-link {
+  color: #0A0A13;
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 15px 0 15px;
+}
+
+.custom-nav .navbar-nav .nav-link:hover {
+  color: #ffd451;
+}
+
+.navbar-light .navbar-nav .active>.nav-link,
+.navbar-light .navbar-nav .nav-link.active,
+.navbar-light .navbar-nav .nav-link.show,
+.navbar-light .navbar-nav .show>.nav-link {
+  color: #ffd451;
 }
 /* ================== Nav End here  ==================*/
 /* ======================================================================= Global End =========================================== */
