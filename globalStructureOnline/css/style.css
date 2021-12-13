@@ -1,68 +1,419 @@
-html, body, div, span, applet, object, iframe,h1, h2, h3, h4, h5, h6, p, blockquote, pre,a, abbr, acronym, address, big, cite, code,del, dfn, em, img, ins, kbd, q, s, samp,small, strike,strong, sub, sup, tt, var,b, u, i, center,dl, dt, dd, ol, ul, li,fieldset, form, label, legend,table, caption, tbody, tfoot, thead, tr, th, td,article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary,time, mark, audio, video {
-  margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block;}body {	line-height: 1;}ol, ul {	list-style: none;}blockquote, q {	quotes: none;}blockquote:before, blockquote:after,q:before, q:after {	content: '';	content: none;}table {	border-collapse: collapse;	border-spacing: 0;}
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
 /* ======================================================================= Global Start =========================================== */
 /* Loader */
- .preloader {
+.ctn-preloader {
+  align-items: center;
+cursor: none;
+  display: flex;
+height: 100%;
+justify-content: center;
   position: fixed;
-  top: 0;
+  left: 0;
+top: 0;
+  width: 100%;
+z-index: 900;
+}
+.ctn-preloader .animation-preloader {
+  position: absolute;
+z-index: 100;
+}
+/* Spinner cargando */
+.ctn-preloader .animation-preloader .spinner {
+animation: spinner 1s infinite linear;
+border-radius: 50%;
+border: 3px solid rgba(0, 0, 0, 0.2);
+border-top-color: #213656; /* No se identa por orden alfabetico para que no lo sobre-escriba */
+height: 18em;
+margin: 0 auto 3.5em auto;
+width: 18em;
+}
+/* Texto cargando */
+.ctn-preloader .animation-preloader .txt-loading {
+font: bold 4em 'Circular Std Book';
+text-align: center;
+user-select: none;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:before {
+animation: letters-loading 4s infinite;
+color: #213656;
+content: attr(data-text-preloader);
+left: 0;
+opacity: 0;
+position: absolute;
+top: 0;
+transform: rotateY(-90deg);
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading {
+  color: rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(2):before {
+animation-delay: 0.2s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(3):before {
+animation-delay: 0.4s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(4):before {
+animation-delay: 0.6s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(5):before {
+animation-delay: 0.8s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(6):before {
+animation-delay: 1s;
+}
+.ctn-preloader .animation-preloader .txt-loading .letters-loading:nth-child(7):before {
+animation-delay: 1.2s;
+}
+.ctn-preloader .loader-section {
+background-color: #ffffff;
+height: 100%;
+  position: fixed;
+top: 0;
+width: calc(50% + 1px);
+}
+.ctn-preloader .loader-section.section-left {
+left: 0;
+}
+.ctn-preloader .loader-section.section-right {
+right: 0;
+}
+/* Efecto de fade en la animaciè´¸n de cargando */
+.loaded .animation-preloader {
+opacity: 0;
+transition: 0.3s ease-out;
+}
+/* Efecto de cortina */
+.loaded .loader-section.section-left {
+transform: translateX(-101%);
+transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+.loaded .loader-section.section-right {
+transform: translateX(101%);
+transition: 0.7s 0.3s all cubic-bezier(0.1, 0.1, 0.1, 1.000);
+}
+.animation-preloader img {
+  width: auto;
+  position: absolute;
+  top: 34%;
   left: 0;
   right: 0;
-  bottom: 0;
-  background: #C11F26;
-  z-index: 99999999999;
-  display: flex;
+  margin: auto;
+  transform: translateY(-45%);
 }
-.preloader-circle {
-  border-radius: 50%;
-  width: 50px;
-  height: 50px;
-  margin:auto;
-  border-width: 2px;  
-  border-style: solid;
-  border-color: #ccc rgba(0, 0, 0, .1) rgba(0, 0, 0, .1) rgba(0, 0, 0, .1);
-  border-top-width: 3px;
-  animation: rotate 1s 0s linear infinite;
+@keyframes spinner {
+  to {
+      transform: rotateZ(360deg);
+  }
 }
-@keyframes rotate {
-  from {transform: rotate(0);}
-  to {transform: rotate(360deg);}
+@keyframes letters-loading {
+0%,
+75%,
+100% {
+  opacity: 0;
+  transform: rotateY(-90deg);
 }
-body::-webkit-scrollbar-track{-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);border-radius: 10px;border-top-left-radius:0px;background-color: #F5F5F5;}
-body::-webkit-scrollbar{width: 12px;background-color: #F5F5F5;}
-body::-webkit-scrollbar-thumb{border-radius: 10px;border-top-left-radius:0px;-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);background-color: #C11F26;}
-html{
+
+25%,
+50% {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+}
+
+body::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar {
+  width: 12px;
+  background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  border-top-left-radius: 0px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+  background-color: #C11F26;
+}
+
+html {
   scrollbar-color: #137ae8 #000000;
   scrollbar-width: thin;
 }
-body{font-family: 'Poppins', sans-serif;}
-ul{list-style: none;}
-.social-ul>li {display: inline-block;margin-right: 34px;}
-.socialIcons {font-size: 28px;color: #030522;text-align: center;transition: 0.2s ease-in-out;}
-.socialIcons:hover {color: #C11F26;transition: 0.3s ease-in-out;}
+
+body {
+  font-family: 'Poppins', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+.social-ul>li {
+  display: inline-block;
+  margin-right: 34px;
+}
+
+.socialIcons {
+  font-size: 28px;
+  color: #030522;
+  text-align: center;
+  transition: 0.2s ease-in-out;
+}
+
+.socialIcons:hover {
+  color: #C11F26;
+  transition: 0.3s ease-in-out;
+}
+
 /* ================== Fonts Family Start ==================*/
-.fp{font-family: 'Poppins', sans-serif;}
+.fp {
+  font-family: 'Poppins', sans-serif;
+}
+
 /* ================== Fonts Family End ==================*/
 
 /* ================== Buttons Start ==================*/
-.red-btn{font-size: 18px;font-weight: 500;padding: 10px 30px;border-radius: 15px;background-color: #C11F26;border: 1px solid #C11F26;transition: 0.3s ease-in-out;}
-.red-btn:hover{background-color: black;border: 1px solid black;transition: 0.3s ease-in-out;}
+.red-btn {
+  font-size: 18px;
+  font-weight: 500;
+  padding: 10px 30px;
+  border-radius: 15px;
+  background-color: #C11F26;
+  border: 1px solid #C11F26;
+  transition: 0.3s ease-in-out;
+}
+
+.red-btn:hover {
+  background-color: black;
+  border: 1px solid black;
+  transition: 0.3s ease-in-out;
+}
+
 /* ================== Buttons End ==================*/
 /* ================== Colors Start ==================*/
-.black{color: black;}
-.white{color: white;}
+.black {
+  color: black;
+}
+
+.white {
+  color: white;
+}
+
 /* ================== Colors End ==================*/
 /* ================== Footer Start ==================*/
-footer{background-image: url(../images/footer-back.png);background-repeat: no-repeat;background-position: center;background-size: cover;margin-top: 127px;padding-top: 109px;}
-footer p{line-height: 30px;}
-footer h6{color: #7D7D7D;font-size: 12px;}
-footer a{color: #A7A7A7;font-size: 16px;text-decoration: none;}
-footer a:hover{color: white;text-decoration: none;}
-.footer-bottom p{color: black;border-top: 1px solid #303030;padding: 30px 0;margin-top: 36px;font-size: 18px;}
-.input-field2 {background-color: black;width: 100%;padding: 10px;outline: none;border:none;}
-.email-container2{background-color: white;display: -ms-flexbox;display: flex;width: 100%;margin-bottom: 40px;}
-.icon22{font-size: 15px;padding: 12px 10px;background-color: #C11F26;color: white;text-align: center;border: 1px solid #C11F26;}
-.icon22:hover{color: #C11F26;background-color: white;border: 1px solid #C11F26;transition: 0.3s ease-in-out;}
+footer {
+  background-image: url(../images/footer-back.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  margin-top: 127px;
+  padding-top: 109px;
+}
+
+footer p {
+  line-height: 30px;
+}
+
+footer h2 {
+  color: #10313C;
+  font-size: 20px;
+  font-weight: 800;
+  margin-bottom: 38px;
+}
+
+footer h6 {
+  color: #7D7D7D;
+  font-size: 12px;
+}
+
+footer li a {
+  color: #10313C;
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  font-family: 'Nunito Sans';
+  margin-bottom: 22px;
+  display: inline-block;
+}
+
+footer li a:hover {
+  color: #F68714;
+}
+
+.footer-bottom p {
+  color: black;
+  border-top: 1px solid #303030;
+  padding: 30px 0;
+  margin-top: 36px;
+  font-size: 18px;
+}
+
+.input-field2 {
+  background-color: black;
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border: none;
+}
+
+.email-container2 {
+  background-color: white;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  margin-bottom: 40px;
+}
+
+.icon22 {
+  font-size: 15px;
+  padding: 12px 10px;
+  background-color: #C11F26;
+  color: white;
+  text-align: center;
+  border: 1px solid #C11F26;
+}
+
+.icon22:hover {
+  color: #C11F26;
+  background-color: white;
+  border: 1px solid #C11F26;
+  transition: 0.3s ease-in-out;
+}
+
 /* ================== Footer End  ==================*/
 /* ================== Nav Start here  ==================*/
 .custom-nav {
@@ -95,15 +446,23 @@ footer a:hover{color: white;text-decoration: none;}
 .navbar-light .navbar-nav .show>.nav-link {
   color: #ffd451;
 }
+
 /* ================== Nav End here  ==================*/
 /* ======================================================================= Global End =========================================== */
 /* ======================= Media Queries =========================================== */
-@media(max-width:991px){
+@media(max-width:991px) {}
 
-}
-@media(max-width:767px){
+@media(max-width:767px) {}
 
-}
-@media(max-width:576px){
-
+@media(max-width:575px) {
+  .animation-preloader img {
+    top: 34%;
+  }
+  .ctn-preloader .animation-preloader .txt-loading {
+    font: bold 3em 'Circular Std Book';
+  }
+  .ctn-preloader .animation-preloader .spinner {
+    height: 15em;
+    width: 15em;
+  }
 }

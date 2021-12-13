@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Loader</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<style>
+#preloader{background-color:#0b0225;bottom:0;left:0;position:fixed;right:0;top:0;z-index:9999}
+#status{background-image:url(./loader.gif);background-position:center center;background-size: cover; background-repeat:no-repeat;height:100px;left:50%;margin:-50px 0 0 -50px;position:absolute;top:50%;width:100px}
+</style>
+</head>
+<body>
+    <div id="preloader"><div id="status"></div></div>
+    
+    <a href="https://loading.io/">loader gif website</a>
+
+<script>
+    $(document).ready(function () {
+      setTimeout(function(){ 
+        $(window).height(); 
+        $(window).scrollTop(0),$("#status").fadeOut(), $("#preloader").delay(0).fadeOut("slow") 
+      }, 2000);
+    });
+    </script>
+</body>
+</html>
+
+
