@@ -1,0 +1,16 @@
+.dropdown .dropdown-menu {
+  display: block;
+  border: 1px solid #E6E6E6;
+  border-radius: 0 0 0.25rem 0.25rem;
+  transform-origin: top;
+  animation-fill-mode: forwards;
+  transform: scale(1, 0);
+  transition: all 0.2s linear;
+  box-shadow: 0 1px 3px rgb(0 0 0 / 10%);
+}
+
+.show > .dropdown-menu {
+  transform: scale(1,1);
+  opacity: 1;
+  display: block;
+}
