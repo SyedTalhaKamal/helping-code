@@ -16,7 +16,7 @@
                                   } else {
                                     echo "";
                                   } ?>">
-                <a href="home.php" class="nav-link">Dashboard</span></a>
+                <a href="home.php" class="nav-link">Dashboard</a>
               </li>
 
               <li class="nav-item active">
