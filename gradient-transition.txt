@@ -1,0 +1,20 @@
+.btn-pink {
+
+background-image: linear-gradient( to top, #b11a68 0%, /* #5fc3e4 51%, */ #d82c53 100% );
+border:
+2px
+
+ solid #d82c53;
+}
+
+
+
+
+
+.btn-pink:hover {
+
+background-position: bottom;
+color: #fff;
+text-decoration: none;
+border-color: #d82c53;
+}
