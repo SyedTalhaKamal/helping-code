@@ -1,0 +1,3 @@
+jQuery('.renameable').each(function(){
+document.write(jQuery(this).text() + '<br>');
+});
