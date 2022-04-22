@@ -1,0 +1,89 @@
+<nav aria-label="Page navigation example" class="text-right">
+<ul class="pagination justify-content-end mt-0">
+<li class="page-item"><a class="page-link" href="#">Previous</a></li>
+<li class="page-item active"><a class="page-link" href="#">1</a></li>
+<li class="page-item"><a class="page-link" href="#">2</a></li>
+<li class="page-item"><a class="page-link" href="#">3</a></li>
+<li class="page-item"><a class="page-link" href="#">Next</a></li>
+</ul>
+</nav>
+
+
+
+
+
+
+
+.pagination {
+
+  box-shadow: 0 3px 10px rgb(23 23 23 / 14%);
+  display: inline-flex;
+}
+
+.pagination .page-item {
+
+  padding: 12px 5px;
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+
+  color: #333333;
+}
+
+.pagination .page-item:first-child a,
+.pagination .page-item:last-child a,
+.pagination .page-item.active:first-child .page-link,
+.pagination .page-item:first-child:hover .page-link,
+.pagination .page-item.active:last-child .page-link,
+.pagination .page-item:last-child:hover .page-link {
+
+  border:
+    1px solid transparent !important;
+}
+
+.pagination .page-item a {
+  padding-top: 0;
+  padding-bottom: 0;
+
+}
+
+.pagination .page-item.active,
+.pagination .page-item:hover {
+
+  background: #560A6A;
+}
+
+.pagination .page-item a {
+
+  border: 0 !important;
+  padding-top: 0;
+  padding-bottom: 0;
+  border-right:
+    1px solid #D6D6D6 !important;
+}
+
+.pagination .page-item:first-child .page-link,
+.pagination .page-item:last-child .page-link {
+
+  color: #333333;
+}
+
+.page-item.active .page-link {
+  background-color: #560A6A;
+  border-color: #560A6A;
+}
+.page-link {
+  color: #000;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+.page-link:hover {
+  color: #fff;
+  background-color: #560A6A;
+  border-color: #dee2e6;
+}
+
+
+
+

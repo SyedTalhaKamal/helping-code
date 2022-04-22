@@ -1,4 +1,4 @@
- <p>
+ <p class="checkbx">
 	<input type="checkbox" id="c1" name="cb">
 	<label for="c1"></label>
 </p>
@@ -7,13 +7,15 @@
 
 
 
-input[type="checkbox"] {
-    visibility: hidden;
+.checkbx input[type="checkbox"] {
+    display: none
   }
-  label {
+
+.checkbx label {
     cursor: pointer;
   }
-  input[type="checkbox"] + label:before {
+
+.checkbx input[type="checkbox"] + label:before {
     border: 2px solid #ebebeb;
     background-color: #ebebeb;
     content: "\00a0";
@@ -25,16 +27,19 @@ input[type="checkbox"] {
     vertical-align: top;
     width: 20px;
   }
-  input[type="checkbox"]:checked + label:before {
+
+.checkbx input[type="checkbox"]:checked + label:before {
     background: #2FC403;
     color: white;
     content: "\2713";
     text-align: center;
   }
-  input[type="checkbox"]:checked + label:after {
+
+.checkbx input[type="checkbox"]:checked + label:after {
     font-weight: bold;
   }
   
-  input[type="checkbox"]:focus + label::before {
+
+.checkbx input[type="checkbox"]:focus + label::before {
       outline: rgb(59, 153, 252) auto 5px;
   }

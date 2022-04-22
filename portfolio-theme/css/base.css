@@ -1,0 +1,16 @@
+@import url("bootstrap.min.css"); 				/* Main Bootstrap */
+@import url("animate.min.css"); 				/* Animate Style */
+@import url("rev-slider.css");					/* Main Revolution CSS */
+@import url("font-awesome.min.css"); 			/* Iconic Fonts */
+@import url("stroke-icons.css"); 				/* Stroke Icon Fonts*/
+@import url("cubeportfolio.min.css"); 			/* Portfolio Grid */
+@import url("style.css"); 						/* Default Stylesheet */
+@import url("shortcodes.css"); 					/* Shortcodes Elements */
+@import url("responsive.css"); 					/* Smart Devices */
+@import url("owl.carousel.min.css"); 			/* Owl Carousel Slider */
+@import url("style-switcher.css"); 				/* Color Theme */
+
+
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet");	/* Google Font */
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,400italic,300italic,300,600,600italic,700,700italic");
+

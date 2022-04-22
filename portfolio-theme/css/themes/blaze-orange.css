@@ -1,0 +1,13 @@
+/* Text Theme Color */
+a, .social-header-links li.off-canvas-menu a, .social-header-links li a:hover, .feature-box [class*="icon-"], .main-head h1, .video-icon a, a.play-video, .cbp-l-filters-big .cbp-filter-item:hover, .cbp-l-filters-buttonCenter .cbp-filter-item.cbp-filter-item-active, .team-thumb ul li a:hover, .price-icon span, .meta-wrap a:hover{color:#f07039;}
+
+/* Background Theme Color */
+.navbar, .feature-box:hover, .feature-box:hover [class*="icon-"], .bar-wrap:after, .bar-wrap:before, .theme-btn, .cbp-l-loadMore-button .cbp-l-loadMore-link.theme-btn, .theme-tab .nav-tabs > li.active > a, .theme-tab .nav-tabs > li.active > a:hover, .theme-tab .nav-tabs > li.active > a:focus, .theme-tab .nav > li > a:hover, .theme-tab .nav > li > a:focus, .main-head span:after, .cbp-l-filters-big .cbp-filter-item.cbp-filter-item-active, .cbp-l-filters-big .cbp-filter-item.cbp-filter-item-active:hover, .cbp-l-filters-big .cbp-filter-item-active:before, .cbp-l-filters-big .cbp-filter-item-active:after, .we-love, .cbp-l-filters-buttonCenter .cbp-filter-item.cbp-filter-item-active:after, .cbp-l-filters-buttonCenter .cbp-filter-counter, .cbp-l-caption-title h3:after, .cbp-l-grid-masonry-projects .cbp-l-caption-buttonLeft, .cbp-l-grid-masonry-projects .cbp-l-caption-buttonRight, .owl-dot.active span, .owl-controls.clickable .owl-dot:hover span, .owl-dot:hover span, .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover, .price-icon:after, .form-animate-fields .form-label:before, #back-top a:hover, .callout .theme-btn:hover, .callout .theme-btn:focus{background-color:#f07039;}
+
+/* Border Theme Color */
+.theme-tab .nav-tabs > li.active > a, .theme-tab .nav-tabs > li.active > a:hover, .theme-tab .nav-tabs > li.active > a:focus, .theme-tab .nav > li > a:hover, .theme-tab .nav > li > a:focus, .owl-nav .owl-prev:hover, .owl-nav .owl-next:hover, .price-icon span, .callout .theme-btn:hover, .callout .theme-btn:focus{
+	border-color:#f07039;
+}
+.cbp-l-filters-buttonCenter .cbp-filter-counter:after {
+    border-top: 4px solid #f07039;
+}
