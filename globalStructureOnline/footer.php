@@ -1,7 +1,6 @@
 <!--footer start here-->
 
 <footer class="position-relative wow fadeIn" data-wow-duration="3s">
-    <img src="images/footer-side.png" alt="" loading="lazy" class="img-fluid footer-left">
     <div class="footer-top">
         <div class="container">
             <div class="row mt-2">
@@ -65,8 +64,7 @@
 
 <!--footer end here-->
 <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" ></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <script src="js/app.js"></script>
