@@ -1,0 +1,62 @@
+===================Single Image Upload======================
+   const [file, setFile] = useState("");
+   const handleChange = (e) => {
+     setFile(URL.createObjectURL(e.target.files[0]));
+   };
+
+
+  <span className="rca-heading position-relative mt-3 d-block">
+                      <label htmlFor="picture" className="upld-lbl">
+                        <h4>Upload Image</h4>
+                        <FaUpload className="upld-icon" />
+                      </label>
+   </span>
+                    <div className="d-none">
+                      <input
+                        type="file"
+                        name="pic"
+                        accept=".gif,.jpg,.png,.tif|image/*"
+                        id="picture"
+                        onChange={handleChange}
+                      />
+                    </div>
+			  <img src={item ? URL.createObjectURL(item) : null} className="mt-2" />
+
+
+========================================================== Multiple Images Upload  ===========================================================
+
+  const [file, setFile] = useState([]);
+  const handleChange = (e) => {
+    setFile(e.target.files);
+  };
+
+  <span className="rca-heading position-relative mt-3 d-block">
+                      <label htmlFor="picture" className="upld-lbl">
+                        <h4>Upload Image</h4>
+                        <FaUpload className="upld-icon" />
+                      </label>
+                    </span>
+                    <div className="d-none">
+                      <input
+                        multiple
+                        type="file"
+                        name="pic"
+                        accept=".gif,.jpg,.png,.tif|image/*"
+                        id="picture"
+                        onChange={handleChange}
+                      />
+                    </div>
+                    {Array.from(file).map((item, index) => {
+                    {console.log(item.name)}
+                      return (
+					//For Image Name
+                        <p key={index} className="upload-form-img">
+                          {item.name}
+					//For Image
+                          {/* <img
+                            src={item ? URL.createObjectURL(item) : null}
+                            className="mt-2"
+                          /> */}
+                        </p>
+                      );
+                    })}
