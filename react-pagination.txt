@@ -27,7 +27,7 @@ function Pagination(props) {
         </li>{" "}
         {pageNumber.slice(pageCount - 5, pageCount).map((number) => (
           <li key={number} className="page-item">
-            <p className="page-link" onClick={() => props.paginate(number)}>
+            <p className={props.currentPage == number ? "page-link active": "page-link"} onClick={() => props.paginate(number)}>
               {number}
             </p>
           </li>
@@ -151,6 +151,8 @@ export default Pagination;
                 limit={limit}
                 totalData={tableData.length}
                 paginate={paginate}
+                currentPage = {currentPage}
+
               />
             </Col>
           </Row>
