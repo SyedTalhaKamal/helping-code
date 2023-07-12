@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Generate PDF with Chart</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <button onclick="generatePDF()">Download PDF</button>
+  <div id="content">
+    <canvas id="myChart"></canvas>
+  </div>
+
+  <script>
+    function generatePDF() {
+      const element = document.getElementById('content');
+      html2pdf()
+        .set({ margin: 10, filename: 'chart.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2 } })
+        .from(element)
+        .save();
+    }
+
+    // Chart.js configuration
+    const ctx = document.getElementById('myChart').getContext('2d');
+    const chart = new Chart(ctx, {
+      type: 'bar',
+      data: {
+        labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+        datasets: [{
+          label: '# of Votes',
+          data: [12, 19, 3, 5, 2, 3],
+          backgroundColor: ['red', 'blue', 'yellow', 'green', 'purple', 'orange'],
+          borderColor: 'black',
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        scales: {
+          y: {
+            beginAtZero: true
+          }
+        }
+      }
+    });
+  </script>
+</body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+  <title>Generate PDF from HTML</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.js"></script>
+</head>
+<body>
+  <button onclick="generatePDF()">Download PDF</button>
+  <div id="content">
+    Your HTML content with charts goes here 
+  </div>
+
+  <script>
+    function generatePDF() {
+      const element = document.getElementById('content');
+      html2pdf()
+        .set({ margin: 10, filename: 'chart.pdf', image: { type: 'jpeg', quality: 0.98 }, html2canvas: { scale: 2 } })
+        .from(element)
+        .save();
+    }
+  </script>
+</body>
+</html> -->
