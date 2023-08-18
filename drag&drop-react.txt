@@ -1,0 +1,54 @@
+  const [alarms, setAlarms] = useState([]);
+
+  function handleOnDrag(e, alarmType) {
+    e.dataTransfer.setData("alarmType", alarmType);
+  }
+  function handleOnDrop(e) {
+    e.preventDefault();
+    const alarmType = e.dataTransfer.getData("alarmType");
+    setAlarms([...alarms, alarmType]);
+  }
+  function handleDragOver(e) {
+    e.preventDefault();
+  }
+  function handleRemoveAlarms(index) {
+    const updatedAlarms = [...alarms];
+    updatedAlarms.splice(index, 1);
+    setAlarms(updatedAlarms);
+  }
+
+                <ul>
+                  <li
+                    draggable
+                    onDragStart={(e) => handleOnDrag(e, "Critical A")}
+                    className="alarmList"
+                  >
+                    Critical A
+                  </li>
+                  <li
+                    className="alarmList"
+                    draggable
+                    onDragStart={(e) => handleOnDrag(e, "Critical B")}
+                  >
+                    Critical B
+                  </li>
+                </ul>
+
+             <div
+              className="alarmDropConatiner"
+              onDrop={handleOnDrop}
+              onDragOver={handleDragOver}
+            >
+              {alarms.length != 0 ? (
+                alarms.map((item, index) => (
+                  <span className="alarmSpan" key={index}>
+                    <span>{item}</span>
+                    <span className="removeAlarm">
+                      <FaTimes onClick={() => handleRemoveAlarms(index)} />
+                    </span>
+                  </span>
+                ))
+              ) : (
+                <h2 className="alarmDragHeading">Drag Alarms Here</h2>
+              )}
+            </div>
