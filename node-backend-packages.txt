@@ -1,0 +1,12 @@
+npm init // create package.json file Lisense MIT, main server.js or index.js
+npm i express 
+npm i -D concurrently dotenv nodemon
+
+
+//Change in package.json file 
+  "scripts": {
+    "start": "node backend/server.js",  // npm start(start backend)
+    "server": "nodemon backend/server.js", // npm run server
+    "client": "npm start --prefix frontend", // npm run client
+    "dev": "concurrently \"npm run server\" \"npm run client\"" // npm run dev(start frontend and backend on same time)
+  },
