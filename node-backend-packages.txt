@@ -1,5 +1,6 @@
 npm init // create package.json file Lisense MIT, main server.js or index.js
-npm i express 
+npm i express mongoose colors
+npm i bcryptjs // used for password hashing
 npm i -D concurrently dotenv nodemon
 
 
@@ -8,5 +9,7 @@ npm i -D concurrently dotenv nodemon
     "start": "node backend/server.js",  // npm start(start backend)
     "server": "nodemon backend/server.js", // npm run server
     "client": "npm start --prefix frontend", // npm run client
-    "dev": "concurrently \"npm run server\" \"npm run client\"" // npm run dev(start frontend and backend on same time)
+    "dev": "concurrently \"npm run server\" \"npm run client\"", // npm run dev(start frontend and backend on same time)
+    "data: import": "node backend/seeder.js", // use for upload dummy data into database
+    "data: destroy": "node backend/seeder.js -d" // use for delete data from database
   },
