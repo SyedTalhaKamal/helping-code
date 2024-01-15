@@ -1,0 +1,11 @@
+npm i react-icons react-router-dom react-loader-spinner react-toastify axios bootstrap react-bootstrap js-cookie sass @mui/material @emotion/react @emotion/styled @mui/icons-material @mui/material
+
+// Conditional packages
+
+npm i react-select
+react-paginate
+chart.js react-chartjs-2
+chartjs-plugin-zoom
+chartjs-plugin-datalabels
+file-saver
+react-datepicker
