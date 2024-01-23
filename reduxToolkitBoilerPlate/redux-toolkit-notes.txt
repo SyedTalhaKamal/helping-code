@@ -1,0 +1,82 @@
+npm install @reduxjs/toolkit 
+npm install react-redux
+
+make store.js in src folder
+import { configureStore } from reduxjs/toolkit
+import all reducers from differnet slices
+export store and the syntax is export const storeName = configureStore()
+it contains an object
+first property is reducer and it contains object or single value and the syntex is reducer:{} or reducer : propertyName
+
+
+make slice folder and create all slices in it like userSlice.js, productSlice.js etc
+configure createSilce from reduxjs/toolkit
+configure nanoid from reduxjs/toolkit. It is used for unique ids but it is optioanl
+import { createSlice, nanoid } from "@reduxjs/toolkit";
+// ======================== Make initial State ==========================//
+// const initialState = {};
+// It may be array or objects depends on the use case
+const initialState = {
+  todos: [
+    {
+      id: 1,
+      text: "Hello World",
+    },
+  ],
+};
+// ======================== Make initial State ==========================//
+
+// ======================== Export Slice ========================//
+// export const todoSlice = createSlice({})
+// createSlice() always contains an object
+// first property is name of the slice
+// second property is initial state which we created above
+// third property is reducers which is object
+// reducers contains multiple or single functions
+// inside the reducers objects we define our functions and the syntax is functionName: (state, action) => {}
+// reducers function always contains two arguments state and action
+// nanoid is a method and it is used for unique ids
+// action.payload is a object and we can access different properties of it like action.payload.username, action.payload.gender, action.payload.PhoneNumber etc
+// state.initialArrayName.push(newObjectName). it is used for update the state value if our initialState is array then we use .push and if our initialState is object we add the property.
+export const todoSlice = createSlice({
+  name: "todo",
+  initialState,
+  reducers: {
+    addTodo: (state, action) => {
+      const todo = {
+        id: nanoid(),
+        text: action.payload.text,
+      };
+      state.todos.push(todo);
+    },
+    removeTodo: (state, action) => {
+      state.todos = state.todos.filter((todo) => todo.id !== action.payload.id);
+    },
+  },
+});
+
+// ======================== Export Slice ========================//
+
+useDispatch() is for sending the data or in other words it is used to add data in the store or in simple words it is used for fun the reducers functionality
+Example:
+add todo through form
+
+in the components file 
+import { useDispatch } from "react-redux";
+import { functionName } from "slicesFolder";
+it is builtin in react-redux
+
+const dispatch = useDispatch(); // syntax for using it
+
+dispatch(addTodo(input)) 
+call dispatch and add function in it which we import from the slices and send an argument value which we expect in the reducers function 
+
+
+
+
+useSelector() it is used for access the data
+it is used to extract the state of a component from the redux store using the selector function.
+import { useSelector} from 'react-redux'
+const variableName = useSelector(() => state.stateName);// syntax for using it
+const todos = useSelector(() => state.todos); Example
+call useSelector and access the state from the store 
