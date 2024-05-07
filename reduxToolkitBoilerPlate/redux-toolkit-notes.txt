@@ -57,7 +57,7 @@ export const todoSlice = createSlice({
 
 // ======================== Export Slice ========================//
 
-useDispatch() is for sending the data or in other words it is used to add data in the store or in simple words it is used for fun the reducers functionality
+useDispatch() is for sending the data or in other words it is used to add data in the store or in simple words it is used for run the reducers functionality
 Example:
 add todo through form
 

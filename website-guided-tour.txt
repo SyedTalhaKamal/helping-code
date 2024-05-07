@@ -1,0 +1,51 @@
+npm install intro.js intro.js-react --force
+
+//import on all pages where we want to show guide tour (example = /solaroverview, /solarperformance)
+import { Steps, Hints } from 'intro.js-react';
+import 'intro.js/introjs.css'; // Import Intro.js styles
+
+  const introJs = useRef(null);
+  const [showIntroTour, setShowIntroTour] = useState(true);
+
+  useEffect(() => {
+    const tourCompleted = localStorage.getItem("tourCompleted");
+    if (tourCompleted) {
+      setShowIntroTour(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (introJs.current) {
+      introJs.current.start();
+    }
+  }, [introJs]);
+
+
+<div className="step-1">
+Website content here
+</div>
+
+      {showIntroTour && (
+        <>
+          <Steps
+            enabled={true}
+            initialStep={0}
+            steps={[
+              {
+                element: ".step-1",
+                intro: "These are differnet types of filter",
+              },
+              {
+                element: ".step-2",
+                intro: "This is step 2. Explore this section.",
+              },
+              // Add more steps as needed
+            ]}
+            onExit={() => {
+              localStorage.setItem("tourCompleted", "true");
+            }}
+            ref={introJs}
+          />
+          <Hints hints={true} />
+        </>
+      )}
