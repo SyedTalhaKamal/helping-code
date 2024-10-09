@@ -2,7 +2,7 @@ npm install @reduxjs/toolkit
 npm install react-redux
 
 make store.js in src folder
-import { configureStore } from reduxjs/toolkit
+import { configureStore } from '@reduxjs/toolkit'
 import all reducers from differnet slices
 export store and the syntax is export const storeName = configureStore()
 it contains an object
@@ -80,3 +80,17 @@ import { useSelector} from 'react-redux'
 const variableName = useSelector(() => state.stateName);// syntax for using it
 const todos = useSelector(() => state.todos); Example
 call useSelector and access the state from the store 
+
+
+in index.js import the following
+import { Provider } from "react-redux";
+import { store } from "./store";
+
+and wrap it like this 
+  <React.StrictMode>
+    <Provider store={store}>
+      <Router basename="/">
+        <App />
+      </Router>
+    </Provider>
+  </React.StrictMode>
